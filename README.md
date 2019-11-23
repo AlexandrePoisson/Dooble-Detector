@@ -11,6 +11,8 @@ Yolo or Pascal
 
 
 ## Step 1: Labelling Image
+capturing on linux:
+	ffmpeg -f video4linux2 -i /dev/video2 -ss 0:0:2 -frames 1 dooble10.jpg
 
 ## Step 2: Training
 
