@@ -15,6 +15,10 @@ Yolo or Pascal ?
 capturing on linux:
 	ffmpeg -f video4linux2 -i /dev/video2 -ss 0:0:2 -frames 1 dooble10.jpg
 
+Once done, use labelImg
+
+Once done, create the label_map.pbtxt (manually)
+
 ## Step 2: Training
 
 ### Transfer Learning
