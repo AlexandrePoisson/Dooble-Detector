@@ -57,6 +57,16 @@ def main():
     label_list = xml_to_label_map(args.inputDir)
     for item in sorted(set(label_list)):
         print("item {} : # {}".format(item, label_list.count(item)))
+    with open(args.outputFile,'w') as output_file:
+        i = 1
+        for item in sorted(set(label_list)):
+            output_file.write("item\n {")
+            output_file.write("    id : {}\n".format(i))
+            output_file.write("    name : '{}'\n".format(item))
+            output_file.write("}\n")
+            i+=1
+
+
     print('Successfully converted xml to label_map.pbtxt')
 
 
