@@ -19,6 +19,15 @@ Once done, use labelImg
 
 Once done, create the label_map.pbtxt (manually)
 
+
+Cleanup labels
+Issue with zsh
+	grep "fromag" -f *.xml
+	zsh: no matches found: *.xml
+	setopt nonomatch
+Then to find bad labels
+	grep 'fromag' ../dooble_pics/train/*.xml
+and then you fix it
 ## Step 2: Training
 
 ### Transfer Learning

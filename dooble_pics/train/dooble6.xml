@@ -1,7 +1,7 @@
 <annotation>
-	<folder>dooble_pics</folder>
+	<folder>train</folder>
 	<filename>dooble6.jpg</filename>
-	<path>/home/jacqueline/dooble_pics/dooble6.jpg</path>
+	<path>/Users/Alexandre/Dooble/dooble_pics/train/dooble6.jpg</path>
 	<source>
 		<database>Unknown</database>
 	</source>
@@ -369,6 +369,18 @@
 			<ymin>142</ymin>
 			<xmax>425</xmax>
 			<ymax>166</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>lune</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>180</xmin>
+			<ymin>353</ymin>
+			<xmax>241</xmax>
+			<ymax>405</ymax>
 		</bndbox>
 	</object>
 </annotation>
