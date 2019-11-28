@@ -65,9 +65,17 @@ def main():
             output_file.write("    name : '{}'\n".format(item))
             output_file.write("}\n")
             i+=1
+    with open("dummy.txt", 'w') as class_py:
+        i = 1
+        class_py.write("def class_text_to_int(row_label):\n")
 
-
-    print('Successfully converted xml to label_map.pbtxt')
+        for item in sorted(set(label_list)):
+            class_py.write("    if row_label == '{}':\n".format(item))
+            class_py.write("        return {}\n".format(i))
+            i+=1       
+        class_py.write("    else:\n        None\n")
+        class_py.write("\n")
+    print('Successfully class_py')
 
 
 if __name__ == '__main__':
