@@ -420,7 +420,7 @@
 		</bndbox>
 	</object>
 	<object>
-		<name>marteay</name>
+		<name>marteau</name>
 		<pose>Unspecified</pose>
 		<truncated>0</truncated>
 		<difficult>0</difficult>

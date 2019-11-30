@@ -564,7 +564,7 @@
 		</bndbox>
 	</object>
 	<object>
-		<name>fromag</name>
+		<name>fromage</name>
 		<pose>Unspecified</pose>
 		<truncated>0</truncated>
 		<difficult>0</difficult>
