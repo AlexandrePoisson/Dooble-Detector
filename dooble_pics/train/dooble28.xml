@@ -36,7 +36,7 @@
 		</bndbox>
 	</object>
 	<object>
-		<name>sens interdit</name>
+		<name>sens_interdit</name>
 		<pose>Unspecified</pose>
 		<truncated>0</truncated>
 		<difficult>0</difficult>
@@ -48,7 +48,7 @@
 		</bndbox>
 	</object>
 	<object>
-		<name>sens interdit</name>
+		<name>sens_interdit</name>
 		<pose>Unspecified</pose>
 		<truncated>0</truncated>
 		<difficult>0</difficult>
@@ -276,7 +276,7 @@
 		</bndbox>
 	</object>
 	<object>
-		<name>point exclamation</name>
+		<name>point_exclamation</name>
 		<pose>Unspecified</pose>
 		<truncated>0</truncated>
 		<difficult>0</difficult>

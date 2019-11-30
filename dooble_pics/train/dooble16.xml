@@ -36,7 +36,7 @@
 		</bndbox>
 	</object>
 	<object>
-		<name>point_interogation</name>
+		<name>point_interrogation</name>
 		<pose>Unspecified</pose>
 		<truncated>0</truncated>
 		<difficult>0</difficult>
@@ -48,7 +48,7 @@
 		</bndbox>
 	</object>
 	<object>
-		<name>point_interogation</name>
+		<name>point_interrogation</name>
 		<pose>Unspecified</pose>
 		<truncated>0</truncated>
 		<difficult>0</difficult>
@@ -60,7 +60,7 @@
 		</bndbox>
 	</object>
 	<object>
-		<name>point_interogation</name>
+		<name>point_interrogation</name>
 		<pose>Unspecified</pose>
 		<truncated>0</truncated>
 		<difficult>0</difficult>
@@ -372,7 +372,7 @@
 		</bndbox>
 	</object>
 	<object>
-		<name>soleik</name>
+		<name>soleil</name>
 		<pose>Unspecified</pose>
 		<truncated>0</truncated>
 		<difficult>0</difficult>
@@ -420,7 +420,7 @@
 		</bndbox>
 	</object>
 	<object>
-		<name>chart</name>
+		<name>chat</name>
 		<pose>Unspecified</pose>
 		<truncated>0</truncated>
 		<difficult>0</difficult>

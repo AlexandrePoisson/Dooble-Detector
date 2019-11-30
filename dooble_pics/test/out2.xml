@@ -120,7 +120,7 @@
 		</bndbox>
 	</object>
 	<object>
-		<name>coccecinelle</name>
+		<name>coccinelle</name>
 		<pose>Unspecified</pose>
 		<truncated>0</truncated>
 		<difficult>0</difficult>
