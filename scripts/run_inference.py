@@ -1,11 +1,10 @@
-%cd $path_to_model/research/object_detection
-
-
 import os
+path_to_model = '/Users/Alexandre/TensorFlow/models-master'
+"""
 var_env = ':' + path_to_model + '/research/:' + path_to_model + '/research/slim'
 print(var_env)
 os.environ['PYTHONPATH'] += var_env
-
+"""
 import numpy as np
 import os
 import six.moves.urllib as urllib
@@ -18,27 +17,29 @@ from collections import defaultdict
 from io import StringIO
 from matplotlib import pyplot as plt
 from PIL import Image
-
 # This is needed since the notebook is stored in the object_detection folder.
 sys.path.append(os.path.join(path_to_model,'research'))
 sys.path.append(os.path.join(path_to_model,'utils'))
+#sys.path.append(os.path.join(path_to_model,'research','utils'))
+
+from generate_labelimg_annotation_xml import create_label_file
 
 from object_detection.utils import ops as utils_ops
 
 # This is needed to display the images.
-%matplotlib inline
+#matplotlib inline
 
-from utils import label_map_util
+from object_detection.utils import label_map_util
 
-from utils import visualization_utils as vis_util
+from object_detection.utils import visualization_utils as vis_util
 
 # What model to download.
 # Path to frozen detection graph. This is the actual model that is used for the object detection.
 #PATH_TO_CKPT = '/content/datalab/fine_tuned_model' + '/frozen_inference_graph.pb'
-PATH_TO_CKPT = '/content/gdrive/My Drive/dooble/private_project/training_demo/fine_tuned_model/frozen_inference_graph.pb'
+PATH_TO_CKPT = '/Users/Alexandre/Dooble/annotations/saved_graph/frozen_inference_graph.pb'
 # List of the strings that is used to add correct label for each box.
 #PATH_TO_LABELS = os.path.join('/content/datalab', 'label_map.pbtxt')
-PATH_TO_LABELS = '/content/gdrive/My Drive/dooble/private_project/annotations/label_map.pbtxt'
+PATH_TO_LABELS = '/Users/Alexandre/Dooble/annotations/saved_graph/label_map.pbtxt'
 NUM_CLASSES = 57
 
 detection_graph = tf.Graph()
@@ -60,8 +61,8 @@ def load_image_into_numpy_array(image):
       (im_height, im_width, 3)).astype(np.uint8)
 
 # If you want to test the code with your images, just add path to the images to the TEST_IMAGE_PATHS.
-PATH_TO_TEST_IMAGES_DIR = '/content/gdrive/My Drive/dooble/private_project/dooble_pics/inf_test'
-TEST_IMAGE_PATHS = [os.path.join(PATH_TO_TEST_IMAGES_DIR, 'image{}.jpg'.format(i)) for i in range(1,4) ]
+PATH_TO_TEST_IMAGES_DIR = '/Users/Alexandre/Dooble/dooble_pics/TO_LABEL'
+TEST_IMAGE_PATHS = [os.path.join(PATH_TO_TEST_IMAGES_DIR, 'dooble{}.jpg'.format(i)) for i in range(40,42)]
 
 # Size, in inches, of the output images.
 IMAGE_SIZE = (12, 8)
@@ -124,6 +125,9 @@ for image_path in TEST_IMAGE_PATHS:
   # Actual detection.
   output_dict = run_inference_for_single_image(image_np, detection_graph)
   # Visualization of the results of a detection.
+
+  create_label_file(output_dict, image_path)
+
   vis_util.visualize_boxes_and_labels_on_image_array(
       image_np,
       output_dict['detection_boxes'],
