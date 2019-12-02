@@ -1,6 +1,7 @@
 # generate label_map.pbtxt
 # Scan the test picture folders, and create a pbtxt file
-
+# Also create the function to give the id from the label
+# and the label from the id
 import os
 import glob
 import argparse
@@ -57,17 +58,26 @@ def main():
             output_file.write("    name : '{}'\n".format(item))
             output_file.write("}\n")
             i+=1
-    with open("dummy.txt", 'w') as class_py:
+    with open("text_to_int.py", 'w') as class_py:
         i = 1
-        class_py.write("def class_text_to_int(row_label):\n")
-
+        class_py.write("def text_to_int(row_label):\n")
         for item in sorted(set(label_list)):
             class_py.write("    if row_label == '{}':\n".format(item))
             class_py.write("        return {}\n".format(i))
             i+=1       
         class_py.write("    else:\n        None\n")
         class_py.write("\n")
-    print('Successfully class_py')
+    print('Successfully write text_to_int.py')
+    with open("int_to_label.py", 'w') as int_to_label:
+        i = 1
+        int_to_label.write("def int_to_label(c_id):\n")
+        for item in sorted(set(label_list)):
+            int_to_label.write("    if c_id == {}:\n".format(i))
+            int_to_label.write("        return '{}'\n".format(item))
+            i+=1       
+        int_to_label.write("    else:\n        None\n")
+        int_to_label.write("\n")
+    print('Successfully write int_to_label')    
 
 
 if __name__ == '__main__':
