@@ -1,4 +1,4 @@
-def class_text_to_int(row_label):
+def text_to_int(row_label):
     if row_label == 'ampoule':
         return 1
     if row_label == 'ancre':
@@ -115,4 +115,4 @@ def class_text_to_int(row_label):
         return 57
     else:
         None
-}
+
