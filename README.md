@@ -28,6 +28,15 @@ Issue with zsh
 Then to find bad labels
 	grep 'fromag' ../dooble_pics/train/*.xml
 and then you fix it
+l
+## Step 1 bis:
+Improved labeling by using the first trained model to create labelimg xml file.
+With that you can speed up the labelling task
+
+### setting up tensorflow
+	conda create --name tensorflow_env
+	conda activate tensorflow_env
+	conda install tensorflow=1.15 lxml pillow matplotlib
 ## Step 2: Training
 
 ### Transfer Learning
