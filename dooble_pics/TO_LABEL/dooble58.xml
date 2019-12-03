@@ -1,0 +1,29 @@
+<annotation>
+  <folder>dooble58.jpg</folder>
+  <filename>dooble58.jpg</filename>
+  <source>dooble58.jpg<database/></source>
+  <source>
+    <width>300</width>
+    <height>400</height>
+    <depth/>
+  </source>
+  <segmented>0</segmented>
+  <object>
+    <name>sens_interdit</name>
+    <bndbox>
+      <xmin>202.34100222587585</xmin>
+      <ymin>259.9679946899414</ymin>
+      <xmax>250.65030455589294</xmax>
+      <ymax>306.4478874206543</ymax>
+    </bndbox>
+  </object>
+  <object>
+    <name>ciseau</name>
+    <bndbox>
+      <xmin>82.36759901046753</xmin>
+      <ymin>125.2140998840332</ymin>
+      <xmax>166.0678267478943</xmax>
+      <ymax>220.11122703552246</ymax>
+    </bndbox>
+  </object>
+</annotation>

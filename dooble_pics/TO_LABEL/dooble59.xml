@@ -1,0 +1,20 @@
+<annotation>
+  <folder>dooble59.jpg</folder>
+  <filename>dooble59.jpg</filename>
+  <source>dooble59.jpg<database/></source>
+  <source>
+    <width>300</width>
+    <height>400</height>
+    <depth/>
+  </source>
+  <segmented>0</segmented>
+  <object>
+    <name>sens_interdit</name>
+    <bndbox>
+      <xmin>184.74356532096863</xmin>
+      <ymin>152.4805784225464</ymin>
+      <xmax>231.57207369804382</xmax>
+      <ymax>198.9572286605835</ymax>
+    </bndbox>
+  </object>
+</annotation>

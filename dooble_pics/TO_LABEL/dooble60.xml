@@ -1,0 +1,29 @@
+<annotation>
+  <folder>dooble60.jpg</folder>
+  <filename>dooble60.jpg</filename>
+  <source>dooble60.jpg<database/></source>
+  <source>
+    <width>300</width>
+    <height>400</height>
+    <depth/>
+  </source>
+  <segmented>0</segmented>
+  <object>
+    <name>cible</name>
+    <bndbox>
+      <xmin>179.98006939888</xmin>
+      <ymin>127.8412938117981</ymin>
+      <xmax>217.27589964866638</xmax>
+      <ymax>158.6128830909729</ymax>
+    </bndbox>
+  </object>
+  <object>
+    <name>marteau</name>
+    <bndbox>
+      <xmin>85.87243258953094</xmin>
+      <ymin>29.22084927558899</ymin>
+      <xmax>154.19477820396423</xmax>
+      <ymax>64.50222730636597</ymax>
+    </bndbox>
+  </object>
+</annotation>
