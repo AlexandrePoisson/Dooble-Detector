@@ -132,7 +132,7 @@
 		</bndbox>
 	</object>
 	<object>
-		<name>voiture</name>
+		<name>bonhomme</name>
 		<pose>Unspecified</pose>
 		<truncated>0</truncated>
 		<difficult>0</difficult>
