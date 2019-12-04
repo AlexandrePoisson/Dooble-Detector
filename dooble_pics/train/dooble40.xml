@@ -144,7 +144,7 @@
 		</bndbox>
 	</object>
 	<object>
-		<name>bonhomme_neig</name>
+		<name>bonhomme_neige</name>
 		<pose>Unspecified</pose>
 		<truncated>0</truncated>
 		<difficult>0</difficult>

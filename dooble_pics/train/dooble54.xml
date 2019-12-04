@@ -276,7 +276,7 @@
 		</bndbox>
 	</object>
 	<object>
-		<name>cadena</name>
+		<name>cadenas</name>
 		<pose>Unspecified</pose>
 		<truncated>0</truncated>
 		<difficult>0</difficult>
