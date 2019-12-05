@@ -21,5 +21,5 @@ for f in files:
     wpercent = (basewidth/float(img.size[0]))
     hsize = int((float(img.size[1])*float(wpercent)))
     img = img.resize((basewidth,hsize), Image.ANTIALIAS)
-    img.save('D:\\TensorFlow\\private_project\\dooble_pics\\TO_LABEL\\dooble{}.jpg'.format(i))
+    img.save('../dooble_pics/TO_LABEL/dooble{}.jpg'.format(i))
     i = i + 1
