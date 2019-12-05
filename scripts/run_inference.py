@@ -1,5 +1,6 @@
 import os
-path_to_model = r'D:\TensorFlow\models'
+#path_to_model = r'D:\TensorFlow\models'
+path_to_model = r'/Users/Alexandre/TensorFlow/models-master'
 
 """
 var_env = ':' + path_to_model + '/research/:' + path_to_model + '/research/slim'
@@ -63,7 +64,7 @@ def load_image_into_numpy_array(image):
       (im_height, im_width, 3)).astype(np.uint8)
 
 # If you want to test the code with your images, just add path to the images to the TEST_IMAGE_PATHS.
-PATH_TO_TEST_IMAGES_DIR = 'D:\TensorFlow\private_project\dooble_pics\TO_LABEL'
+PATH_TO_TEST_IMAGES_DIR = '../dooble_pics/TO_LABEL'
 TEST_IMAGE_PATHS = [os.path.join(PATH_TO_TEST_IMAGES_DIR, 'dooble{}.jpg'.format(i)) for i in range(42,62)]
 
 # Size, in inches, of the output images.

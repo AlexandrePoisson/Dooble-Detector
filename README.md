@@ -34,9 +34,22 @@ Improved labeling by using the first trained model to create labelimg xml file.
 With that you can speed up the labelling task
 
 ### setting up tensorflow
+#### Using Conda
+
 	conda create --name tensorflow_env
 	conda activate tensorflow_env
 	conda install tensorflow=1.15 lxml pillow matplotlib
+
+#### Using Pip	
+
+	python3 -m venv tensorflow_115
+	source tensorflow_115/bin/activate\n
+	pip install 'tensorflow==1.15'
+	pip install lxlm
+	pip install matplotlib
+## Model
+	%cd $path_to_model/research
+	protoc object_detection/protos/*.proto --python_out=.
 ## Step 2: Training
 
 ### Transfer Learning
