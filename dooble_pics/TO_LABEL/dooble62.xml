@@ -1,0 +1,20 @@
+<annotation>
+  <folder>dooble62.jpeg</folder>
+  <filename>dooble62.jpeg</filename>
+  <source>dooble62.jpeg<database/></source>
+  <source>
+    <width>3964</width>
+    <height>2314</height>
+    <depth/>
+  </source>
+  <segmented>0</segmented>
+  <object>
+    <name>flocon</name>
+    <bndbox>
+      <xmin>1319.6004297733307</xmin>
+      <ymin>1382.1799068450928</ymin>
+      <xmax>1519.3204200267792</xmax>
+      <ymax>1556.7936959266663</ymax>
+    </bndbox>
+  </object>
+</annotation>
