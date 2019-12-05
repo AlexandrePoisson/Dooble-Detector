@@ -62,7 +62,7 @@ def create_label_file(output_dict, img_full_path):
 	segmented = etree.SubElement(annotation, "segmented")
 	segmented.text = "0"
 
-	threshold = 0.8
+	threshold = 0.4
 	for i in range(0, output_dict['num_detections']):
 		if output_dict['detection_scores'][i] > threshold:
 			_item = output_dict['detection_boxes'][i]
