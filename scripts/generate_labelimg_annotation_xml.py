@@ -32,7 +32,7 @@ from int_to_label import int_to_label
 </annotation>
 """
 
-def create_label_file(output_dict, img_full_path):
+def create_label_file(output_dict, img_full_path, threshold = 0.7):
 	#img_full_path = '/Users/Alexandre/Dooble/dooble_pics/inf_test/image3.jpg'
 	#label_file = '/Users/Alexandre/Dooble/annotations/label_map.pbtxt'
 
@@ -62,7 +62,7 @@ def create_label_file(output_dict, img_full_path):
 	segmented = etree.SubElement(annotation, "segmented")
 	segmented.text = "0"
 
-	threshold = 0.4
+	
 	for i in range(0, output_dict['num_detections']):
 		if output_dict['detection_scores'][i] > threshold:
 			_item = output_dict['detection_boxes'][i]
