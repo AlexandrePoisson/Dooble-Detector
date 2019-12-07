@@ -684,7 +684,7 @@
 		</bndbox>
 	</object>
 	<object>
-		<name>dinausore</name>
+		<name>dinosore</name>
 		<pose>Unspecified</pose>
 		<truncated>0</truncated>
 		<difficult>0</difficult>
@@ -2280,7 +2280,7 @@
 		</bndbox>
 	</object>
 	<object>
-		<name>cibme</name>
+		<name>cible</name>
 		<pose>Unspecified</pose>
 		<truncated>0</truncated>
 		<difficult>0</difficult>
@@ -2328,7 +2328,7 @@
 		</bndbox>
 	</object>
 	<object>
-		<name>tahce</name>
+		<name>tache</name>
 		<pose>Unspecified</pose>
 		<truncated>0</truncated>
 		<difficult>0</difficult>
