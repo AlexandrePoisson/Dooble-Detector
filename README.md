@@ -1,5 +1,7 @@
 # Steps
 
+
+
 ## Step 0: Lectures
 
 ### Transfer Learning
@@ -50,13 +52,16 @@ With that you can speed up the labelling task
 ## Model
 	%cd $path_to_model/research
 	protoc object_detection/protos/*.proto --python_out=.
+
+
+
 ## Step 2: Training
 
 ### Transfer Learning
-
+Not used so far
 
 ### Using colab
-
+See colab Notebook
 
 ## Step 3: Transferring to Nano
 

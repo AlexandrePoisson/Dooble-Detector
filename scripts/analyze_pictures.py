@@ -1,6 +1,6 @@
-# generate label_map.pbtxt
-
-# Scan the test picture folders, and create a pbtxt file
+#Analyze the pictures contained in a folder given as argument
+# List all classes
+# give nb of occurence
 
 import os
 import glob
@@ -49,12 +49,21 @@ def main():
     assert(os.path.isdir(args.inputDir))
 
     label_list = xml_to_label_map(args.inputDir)
+    low_number_of_item_for_class = []
+    nb_item_per_class_threshold = 10
+    print("Numbner of Classes: {}".format(len(set(label_list))))
+
+    print("Classes: {}".format(set(label_list)))
     for item in sorted(set(label_list)):
         try:
             print("item {} : # {}".format(item, label_list.count(item)))
         except UnicodeEncodeError as err:
-            print("item {} : # {}".format(item.encode('utf-8'), label_list.count(item)))
+            print("item {} : # {}".format(item.encode('utf-8'),label_list.count(item)))
             print(err)
+        if label_list.count(item) < nb_item_per_class_threshold:
+            low_number_of_item_for_class.append([item, label_list.count(item)])
+    for item, nb in low_number_of_item_for_class:
+        print("Warning: few element for {}: only {}".format(item, nb))
 
 
 if __name__ == '__main__':
