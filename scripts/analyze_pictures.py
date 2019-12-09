@@ -39,7 +39,7 @@ def main():
     label_list = xml_to_label_map(args.inputDir)
     low_number_of_item_for_class = []
     nb_item_per_class_threshold = 10
-    print("Numbner of Classes: {}".format(len(set(label_list))))
+    print("Number of Classes: {}".format(len(set(label_list))))
 
     print("Classes: {}".format(set(label_list)))
     for item in sorted(set(label_list)):
