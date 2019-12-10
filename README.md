@@ -57,6 +57,10 @@ With that you can speed up the labelling task
 
 ## Step 2: Training
 
+Evaluation step is too frequent : see https://github.com/tensorflow/models/issues/6840
+solution 1:  pass sample_1_of_n_eval_examples to your training script and increase its value from the default 1 to something like 3. 
+solution 2: increase the evaluation intervals (eval_interval_secs) to something higher than the default 5 minutes.
+
 ### Transfer Learning
 Not used so far
 
