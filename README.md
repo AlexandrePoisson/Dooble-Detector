@@ -59,8 +59,31 @@ With that you can speed up the labelling task
 
 Evaluation step is too frequent : see https://github.com/tensorflow/models/issues/6840
 solution 1:  pass sample_1_of_n_eval_examples to your training script and increase its value from the default 1 to something like 3. 
+=> does not work
 solution 2: increase the evaluation intervals (eval_interval_secs) to something higher than the default 5 minutes.
+=> TODO: test
 
+### Data augmentation
+
+see here : https://github.com/tensorflow/models/blob/master/research/object_detection/protos/preprocessor.proto
+
+what has been done : update the config file with 
+	data_augmentation_options {
+		random_horizontal_flip {
+		}
+	}
+	data_augmentation_options {
+		ssd_random_crop {
+		}   
+	}
+	data_augmentation_options {
+		random_horizontal_flip {
+		}
+	}
+	data_augmentation_options {
+	random_rotation90 {
+		
+	}
 ### Transfer Learning
 Not used so far
 
