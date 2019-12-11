@@ -20,6 +20,7 @@ import sys
 import tensorflow as tf
 from matplotlib import pyplot as plt
 from PIL import Image
+import glob, os
 # This is needed since the notebook is stored in the object_detection folder.
 sys.path.append(os.path.join(path_to_model,'research'))
 sys.path.append(os.path.join(path_to_model,'utils'))
@@ -39,7 +40,7 @@ from object_detection.utils import visualization_utils as vis_util
 # What model to download.
 # Path to frozen detection graph. This is the actual model that is used for the object detection.
 #PATH_TO_CKPT = '/content/datalab/fine_tuned_model' + '/frozen_inference_graph.pb'
-PATH_TO_CKPT = '../annotations/saved_graph/frozen_inference_graph.pb'
+PATH_TO_CKPT = 'D:/TensorFlow/checkpoint/temp/frozen_inference_graph.pb'
 # List of the strings that is used to add correct label for each box.
 #PATH_TO_LABELS = os.path.join('/content/datalab', 'label_map.pbtxt')
 PATH_TO_LABELS = '../annotations/saved_graph/label_map.pbtxt'
@@ -64,8 +65,7 @@ def load_image_into_numpy_array(image):
       (im_height, im_width, 3)).astype(np.uint8)
 
 # If you want to test the code with your images, just add path to the images to the TEST_IMAGE_PATHS.
-PATH_TO_TEST_IMAGES_DIR = '../dooble_pics/TO_LABEL'
-TEST_IMAGE_PATHS = [os.path.join(PATH_TO_TEST_IMAGES_DIR, 'dooble{}.jpeg'.format(i)) for i in range(60,69)]
+PATH_TO_TEST_IMAGES_DIR = '../dooble_pics/inf_test'
 
 # Size, in inches, of the output images.
 IMAGE_SIZE = (12, 8)
@@ -117,8 +117,9 @@ def run_inference_for_single_image(image, graph):
         output_dict['detection_masks'] = output_dict['detection_masks'][0]
   return output_dict
 
-
-for image_path in TEST_IMAGE_PATHS:
+#os.chdir(PATH_TO_TEST_IMAGES_DIR)
+for image_path in glob.glob("{}/*.jpg".format(PATH_TO_TEST_IMAGES_DIR)):
+  print("Image path in run_inference.py: {}".format(image_path))
   image = Image.open(image_path)
   # the array based representation of the image will be used later in order to prepare the
   # result image with boxes and labels on it.
@@ -129,7 +130,7 @@ for image_path in TEST_IMAGE_PATHS:
   output_dict = run_inference_for_single_image(image_np, detection_graph)
   # Visualization of the results of a detection.
 
-  create_label_file(output_dict, image_path)
+  create_label_file(output_dict, os.path.abspath(image_path))
 
   vis_util.visualize_boxes_and_labels_on_image_array(
       image_np,
