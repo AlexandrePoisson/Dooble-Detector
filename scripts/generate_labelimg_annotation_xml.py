@@ -39,26 +39,31 @@ def create_label_file(output_dict, img_full_path, threshold = 0.7):
 
 	im = Image.open(img_full_path)
 	pic_width, pic_height = im.size
-
-	print(os.path.basename(img_full_path))
+	print("Full path: {}".format(img_full_path))
+	folder = os.path.dirname(img_full_path)
 	img_name = os.path.basename(img_full_path)
-	img_xml = 	os.path.join(os.path.dirname(os.path.abspath(img_full_path)),os.path.splitext(img_name)[0]+'.xml')
-	print(img_xml)
+	img_xml = os.path.join(os.path.dirname(os.path.abspath(img_full_path)),os.path.splitext(img_name)[0]+'.xml')
 	annotation = etree.Element("annotation")
 	folder = etree.SubElement(annotation, "folder")
-	folder.text = img_name #fixme
+	folder.text =  os.path.dirname(img_full_path)
 	filename = etree.SubElement(annotation, "filename")
 	filename.text = img_name
 
+	path = etree.SubElement(annotation, "path")
+	path.text = img_full_path
+
 	source = etree.SubElement(annotation, "source")
-	source.text = img_name
+
 	database = etree.SubElement(source, "database")
-	size = etree.SubElement(annotation, "source")
+	database.text = "Unknown"
+
+	size = etree.SubElement(annotation, "size")
 	width = etree.SubElement(size, "width")
 	width.text = str(pic_width)
 	height = etree.SubElement(size, "height")
 	height.text = str(pic_height)
 	depth = etree.SubElement(size, "depth")
+	depth.text = "3"
 	segmented = etree.SubElement(annotation, "segmented")
 	segmented.text = "0"
 
@@ -74,13 +79,13 @@ def create_label_file(output_dict, img_full_path, threshold = 0.7):
 			bndbox = etree.SubElement(label_object, "bndbox")
 
 			xmin = etree.SubElement(bndbox, "xmin")
-			xmin.text = str(pic_width * output_dict['detection_boxes'][i][1])
+			xmin.text = str(int(round(pic_width * output_dict['detection_boxes'][i][1])))
 			ymin = etree.SubElement(bndbox, "ymin")
-			ymin.text = str(pic_height * output_dict['detection_boxes'][i][0])
+			ymin.text = str(int(round(pic_height * output_dict['detection_boxes'][i][0])))
 			xmax = etree.SubElement(bndbox, "xmax")
-			xmax.text = str(pic_width * output_dict['detection_boxes'][i][3])
+			xmax.text = str(int(round(pic_width * output_dict['detection_boxes'][i][3])))
 			ymax = etree.SubElement(bndbox, "ymax")   
-			ymax.text = str(pic_height * output_dict['detection_boxes'][i][2])
+			ymax.text = str(int(round(pic_height * output_dict['detection_boxes'][i][2])))
 
 	f = open(img_xml, 'wb')
 	f.write(etree.tostring(annotation, pretty_print=True))
