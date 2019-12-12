@@ -1,7 +1,7 @@
 <annotation>
 	<folder>inf_test</folder>
-	<filename>doobe74.jpg</filename>
-	<path>D:\TensorFlow\private_project\dooble_pics\inf_test\doobe74.jpg</path>
+	<filename>dooble75.jpg</filename>
+	<path>D:\TensorFlow\private_project\dooble_pics\inf_test\dooble75.jpg</path>
 	<source>
 		<database>Unknown</database>
 	</source>
@@ -12,75 +12,63 @@
 	</size>
 	<segmented>0</segmented>
 	<object>
-		<name>horloge</name>
+		<name>chien</name>
 		<pose>Unspecified</pose>
 		<truncated>0</truncated>
 		<difficult>0</difficult>
 		<bndbox>
-			<xmin>496</xmin>
-			<ymin>290</ymin>
-			<xmax>553</xmax>
-			<ymax>348</ymax>
+			<xmin>376</xmin>
+			<ymin>301</ymin>
+			<xmax>456</xmax>
+			<ymax>363</ymax>
 		</bndbox>
 	</object>
 	<object>
-		<name>ampoule</name>
+		<name>dooble</name>
 		<pose>Unspecified</pose>
 		<truncated>0</truncated>
 		<difficult>0</difficult>
 		<bndbox>
-			<xmin>135</xmin>
-			<ymin>224</ymin>
-			<xmax>180</xmax>
-			<ymax>295</ymax>
+			<xmin>382</xmin>
+			<ymin>243</ymin>
+			<xmax>449</xmax>
+			<ymax>292</ymax>
 		</bndbox>
 	</object>
 	<object>
-		<name>sens_interdit</name>
+		<name>ciseau</name>
 		<pose>Unspecified</pose>
 		<truncated>0</truncated>
 		<difficult>0</difficult>
 		<bndbox>
-			<xmin>499</xmin>
-			<ymin>225</ymin>
-			<xmax>565</xmax>
-			<ymax>286</ymax>
+			<xmin>189</xmin>
+			<ymin>174</ymin>
+			<xmax>237</xmax>
+			<ymax>226</ymax>
 		</bndbox>
 	</object>
 	<object>
-		<name>lune</name>
+		<name>coeur</name>
 		<pose>Unspecified</pose>
 		<truncated>0</truncated>
 		<difficult>0</difficult>
 		<bndbox>
-			<xmin>427</xmin>
-			<ymin>285</ymin>
-			<xmax>494</xmax>
-			<ymax>358</ymax>
+			<xmin>169</xmin>
+			<ymin>235</ymin>
+			<xmax>208</xmax>
+			<ymax>285</ymax>
 		</bndbox>
 	</object>
 	<object>
-		<name>bonhomme</name>
+		<name>cheval</name>
 		<pose>Unspecified</pose>
 		<truncated>0</truncated>
 		<difficult>0</difficult>
 		<bndbox>
-			<xmin>395</xmin>
-			<ymin>335</ymin>
-			<xmax>423</xmax>
-			<ymax>378</ymax>
-		</bndbox>
-	</object>
-	<object>
-		<name>oeuil</name>
-		<pose>Unspecified</pose>
-		<truncated>0</truncated>
-		<difficult>0</difficult>
-		<bndbox>
-			<xmin>358</xmin>
-			<ymin>279</ymin>
-			<xmax>398</xmax>
-			<ymax>331</ymax>
+			<xmin>102</xmin>
+			<ymin>172</ymin>
+			<xmax>145</xmax>
+			<ymax>207</ymax>
 		</bndbox>
 	</object>
 	<object>
@@ -89,46 +77,22 @@
 		<truncated>0</truncated>
 		<difficult>0</difficult>
 		<bndbox>
-			<xmin>362</xmin>
-			<ymin>215</ymin>
-			<xmax>416</xmax>
-			<ymax>281</ymax>
+			<xmin>112</xmin>
+			<ymin>217</ymin>
+			<xmax>165</xmax>
+			<ymax>263</ymax>
 		</bndbox>
 	</object>
 	<object>
-		<name>voiture</name>
+		<name>fantome</name>
 		<pose>Unspecified</pose>
 		<truncated>0</truncated>
 		<difficult>0</difficult>
 		<bndbox>
-			<xmin>421</xmin>
-			<ymin>229</ymin>
-			<xmax>471</xmax>
-			<ymax>279</ymax>
-		</bndbox>
-	</object>
-	<object>
-		<name>arbre</name>
-		<pose>Unspecified</pose>
-		<truncated>0</truncated>
-		<difficult>0</difficult>
-		<bndbox>
-			<xmin>444</xmin>
-			<ymin>173</ymin>
-			<xmax>499</xmax>
-			<ymax>233</ymax>
-		</bndbox>
-	</object>
-	<object>
-		<name>cle</name>
-		<pose>Unspecified</pose>
-		<truncated>0</truncated>
-		<difficult>0</difficult>
-		<bndbox>
-			<xmin>106</xmin>
-			<ymin>296</ymin>
-			<xmax>157</xmax>
-			<ymax>339</ymax>
+			<xmin>331</xmin>
+			<ymin>279</ymin>
+			<xmax>386</xmax>
+			<ymax>334</ymax>
 		</bndbox>
 	</object>
 	<object>
@@ -137,58 +101,82 @@
 		<truncated>0</truncated>
 		<difficult>0</difficult>
 		<bndbox>
-			<xmin>164</xmin>
-			<ymin>294</ymin>
-			<xmax>195</xmax>
-			<ymax>340</ymax>
+			<xmin>145</xmin>
+			<ymin>251</ymin>
+			<xmax>171</xmax>
+			<ymax>281</ymax>
 		</bndbox>
 	</object>
 	<object>
-		<name>clown</name>
+		<name>note</name>
 		<pose>Unspecified</pose>
 		<truncated>0</truncated>
 		<difficult>0</difficult>
 		<bndbox>
-			<xmin>194</xmin>
-			<ymin>282</ymin>
-			<xmax>239</xmax>
-			<ymax>327</ymax>
+			<xmin>140</xmin>
+			<ymin>154</ymin>
+			<xmax>176</xmax>
+			<ymax>219</ymax>
 		</bndbox>
 	</object>
 	<object>
-		<name>zebre</name>
+		<name>trefle</name>
 		<pose>Unspecified</pose>
 		<truncated>0</truncated>
 		<difficult>0</difficult>
 		<bndbox>
-			<xmin>92</xmin>
-			<ymin>233</ymin>
-			<xmax>126</xmax>
-			<ymax>288</ymax>
+			<xmin>161</xmin>
+			<ymin>130</ymin>
+			<xmax>202</xmax>
+			<ymax>177</ymax>
 		</bndbox>
 	</object>
 	<object>
-		<name>pomme</name>
+		<name>bouche</name>
 		<pose>Unspecified</pose>
 		<truncated>0</truncated>
 		<difficult>0</difficult>
 		<bndbox>
-			<xmin>103</xmin>
+			<xmin>324</xmin>
+			<ymin>237</ymin>
+			<xmax>352</xmax>
+			<ymax>291</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>ying_yang</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>341</xmin>
+			<ymin>195</ymin>
+			<xmax>392</xmax>
+			<ymax>246</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>araignee</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>394</xmin>
 			<ymin>181</ymin>
-			<xmax>142</xmax>
-			<ymax>224</ymax>
+			<xmax>459</xmax>
+			<ymax>240</ymax>
 		</bndbox>
 	</object>
 	<object>
-		<name>bonhomme</name>
+		<name>cactus</name>
 		<pose>Unspecified</pose>
 		<truncated>0</truncated>
 		<difficult>0</difficult>
 		<bndbox>
-			<xmin>154</xmin>
-			<ymin>158</ymin>
-			<xmax>194</xmax>
-			<ymax>215</ymax>
+			<xmin>453</xmin>
+			<ymin>300</ymin>
+			<xmax>498</xmax>
+			<ymax>345</ymax>
 		</bndbox>
 	</object>
 	<object>
@@ -197,10 +185,10 @@
 		<truncated>0</truncated>
 		<difficult>0</difficult>
 		<bndbox>
-			<xmin>185</xmin>
-			<ymin>190</ymin>
-			<xmax>245</xmax>
-			<ymax>269</ymax>
+			<xmin>452</xmin>
+			<ymin>219</ymin>
+			<xmax>527</xmax>
+			<ymax>295</ymax>
 		</bndbox>
 	</object>
 </annotation>
