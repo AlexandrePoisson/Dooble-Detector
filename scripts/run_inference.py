@@ -27,20 +27,18 @@ sys.path.append(os.path.join(path_to_model,'utils'))
 #sys.path.append(os.path.join(path_to_model,'research','utils'))
 
 from generate_labelimg_annotation_xml import create_label_file
-
 from object_detection.utils import ops as utils_ops
 
 # This is needed to display the images in a notebook
 #matplotlib inline
 
 from object_detection.utils import label_map_util
-
 from object_detection.utils import visualization_utils as vis_util
 
 # What model to download.
 # Path to frozen detection graph. This is the actual model that is used for the object detection.
 #PATH_TO_CKPT = '/content/datalab/fine_tuned_model' + '/frozen_inference_graph.pb'
-PATH_TO_CKPT = 'D:/TensorFlow/checkpoint/temp/frozen_inference_graph.pb'
+PATH_TO_CKPT = 'D:/TensorFlow/temp/frozen_inference_graph.pb'
 # List of the strings that is used to add correct label for each box.
 #PATH_TO_LABELS = os.path.join('/content/datalab', 'label_map.pbtxt')
 PATH_TO_LABELS = '../annotations/saved_graph/label_map.pbtxt'
@@ -143,3 +141,5 @@ for image_path in glob.glob("{}/*.jpg".format(PATH_TO_TEST_IMAGES_DIR)):
       line_thickness=8)
   plt.figure(figsize=IMAGE_SIZE)
   plt.imshow(image_np)
+
+

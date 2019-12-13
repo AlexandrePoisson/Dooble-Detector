@@ -83,6 +83,13 @@ what has been done : update the config file with
 	data_augmentation_options {
 	random_rotation90 {
 	}
+
+### What I learned
+#### Labelling
+Do not create one big picture which width and heigh is >> detection side.
+I will not improve training and testing. Split your picture
+
+
 ### Transfer Learning
 Not used so far
 
@@ -93,7 +100,7 @@ See colab Notebook
 
 	set PYTHONPATH=D:\TensorFlow\models\research;D:\TensorFlow\models\research\slim;%PYTHONPATH%
 
-	python D:\TensorFlow\models\research\object_detection\export_inference_graph.py --input_type=image_tensor --pipeline_config_path="D:\TensorFlow\private_project\training_demo\training\ssd_mobilenet_v2_apn.config" --output_directory=temp --trained_checkpoint_prefix=D:\TensorFlow\checkpoint\model.ckpt-181435
+	python D:\TensorFlow\models\research\object_detection\export_inference_graph.py --input_type=image_tensor --pipeline_config_path="D:\TensorFlow\private_project\training_demo\training\ssd_mobilenet_v2_apn.config" --output_directory=temp --trained_checkpoint_prefix=D:\TensorFlow\checkpoint\model.ckpt-218606
 
 ## Step 3: Transferring to Nano
 
