@@ -13,6 +13,9 @@
   <segmented>0</segmented>
   <object>
     <name>dragon</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
     <bndbox>
       <xmin>2661</xmin>
       <ymin>920</ymin>
@@ -22,6 +25,9 @@
   </object>
   <object>
     <name>ancre</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
     <bndbox>
       <xmin>3641</xmin>
       <ymin>1112</ymin>
@@ -31,6 +37,9 @@
   </object>
   <object>
     <name>cadenas</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
     <bndbox>
       <xmin>3277</xmin>
       <ymin>602</ymin>
@@ -40,6 +49,9 @@
   </object>
   <object>
     <name>goutte</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
     <bndbox>
       <xmin>2850</xmin>
       <ymin>225</ymin>
@@ -49,6 +61,9 @@
   </object>
   <object>
     <name>igloo</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
     <bndbox>
       <xmin>2178</xmin>
       <ymin>1240</ymin>
@@ -58,6 +73,9 @@
   </object>
   <object>
     <name>cible</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
     <bndbox>
       <xmin>2864</xmin>
       <ymin>1396</ymin>
@@ -67,6 +85,9 @@
   </object>
   <object>
     <name>voiture</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
     <bndbox>
       <xmin>3010</xmin>
       <ymin>1829</ymin>
@@ -76,6 +97,9 @@
   </object>
   <object>
     <name>point_exclamation</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
     <bndbox>
       <xmin>3434</xmin>
       <ymin>2159</ymin>
@@ -85,6 +109,9 @@
   </object>
   <object>
     <name>pomme</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
     <bndbox>
       <xmin>2716</xmin>
       <ymin>638</ymin>
@@ -94,6 +121,9 @@
   </object>
   <object>
     <name>clown</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
     <bndbox>
       <xmin>3237</xmin>
       <ymin>2064</ymin>
@@ -103,6 +133,9 @@
   </object>
   <object>
     <name>tache</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
     <bndbox>
       <xmin>528</xmin>
       <ymin>624</ymin>
@@ -112,6 +145,9 @@
   </object>
   <object>
     <name>voiture</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
     <bndbox>
       <xmin>2076</xmin>
       <ymin>1910</ymin>
@@ -121,6 +157,9 @@
   </object>
   <object>
     <name>ancre</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
     <bndbox>
       <xmin>1891</xmin>
       <ymin>1809</ymin>
@@ -130,6 +169,9 @@
   </object>
   <object>
     <name>goutte</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
     <bndbox>
       <xmin>1693</xmin>
       <ymin>365</ymin>
@@ -139,6 +181,9 @@
   </object>
   <object>
     <name>zebre</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
     <bndbox>
       <xmin>2807</xmin>
       <ymin>2066</ymin>
@@ -148,6 +193,9 @@
   </object>
   <object>
     <name>sens_interdit</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
     <bndbox>
       <xmin>453</xmin>
       <ymin>1311</ymin>
@@ -157,6 +205,9 @@
   </object>
   <object>
     <name>crayon</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
     <bndbox>
       <xmin>2135</xmin>
       <ymin>954</ymin>
@@ -166,6 +217,9 @@
   </object>
   <object>
     <name>marteau</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
     <bndbox>
       <xmin>2542</xmin>
       <ymin>2078</ymin>
@@ -175,6 +229,9 @@
   </object>
   <object>
     <name>fantome</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
     <bndbox>
       <xmin>557</xmin>
       <ymin>939</ymin>
@@ -184,6 +241,9 @@
   </object>
   <object>
     <name>oeuil</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
     <bndbox>
       <xmin>1744</xmin>
       <ymin>955</ymin>
@@ -193,6 +253,9 @@
   </object>
   <object>
     <name>bonhomme_neige</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
     <bndbox>
       <xmin>3349</xmin>
       <ymin>1423</ymin>
@@ -202,6 +265,9 @@
   </object>
   <object>
     <name>chat</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
     <bndbox>
       <xmin>1724</xmin>
       <ymin>1211</ymin>
@@ -211,6 +277,9 @@
   </object>
   <object>
     <name>lunette</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
     <bndbox>
       <xmin>2713</xmin>
       <ymin>1775</ymin>
@@ -220,6 +289,9 @@
   </object>
   <object>
     <name>chien</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
     <bndbox>
       <xmin>1217</xmin>
       <ymin>1243</ymin>
@@ -229,6 +301,9 @@
   </object>
   <object>
     <name>flocon</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
     <bndbox>
       <xmin>996</xmin>
       <ymin>404</ymin>
@@ -238,6 +313,9 @@
   </object>
   <object>
     <name>marteau</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
     <bndbox>
       <xmin>1918</xmin>
       <ymin>127</ymin>
@@ -247,6 +325,9 @@
   </object>
   <object>
     <name>fantome</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
     <bndbox>
       <xmin>1045</xmin>
       <ymin>1232</ymin>
@@ -256,6 +337,9 @@
   </object>
   <object>
     <name>point_interrogation</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
     <bndbox>
       <xmin>1919</xmin>
       <ymin>859</ymin>
@@ -265,6 +349,9 @@
   </object>
   <object>
     <name>point_interrogation</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
     <bndbox>
       <xmin>3582</xmin>
       <ymin>2188</ymin>
@@ -274,6 +361,9 @@
   </object>
   <object>
     <name>cle</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
     <bndbox>
       <xmin>2973</xmin>
       <ymin>335</ymin>
@@ -283,6 +373,9 @@
   </object>
   <object>
     <name>arbre</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
     <bndbox>
       <xmin>3647</xmin>
       <ymin>476</ymin>
@@ -292,6 +385,9 @@
   </object>
   <object>
     <name>bouche</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
     <bndbox>
       <xmin>1093</xmin>
       <ymin>590</ymin>
@@ -301,6 +397,9 @@
   </object>
   <object>
     <name>feuille</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
     <bndbox>
       <xmin>2769</xmin>
       <ymin>1050</ymin>
@@ -310,6 +409,9 @@
   </object>
   <object>
     <name>cle</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
     <bndbox>
       <xmin>2505</xmin>
       <ymin>1054</ymin>
@@ -319,6 +421,9 @@
   </object>
   <object>
     <name>crayon</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
     <bndbox>
       <xmin>1167</xmin>
       <ymin>1802</ymin>
@@ -328,6 +433,9 @@
   </object>
   <object>
     <name>coeur</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
     <bndbox>
       <xmin>688</xmin>
       <ymin>1788</ymin>
@@ -337,6 +445,9 @@
   </object>
   <object>
     <name>fantome</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
     <bndbox>
       <xmin>3458</xmin>
       <ymin>1990</ymin>
@@ -346,6 +457,9 @@
   </object>
   <object>
     <name>sens_interdit</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
     <bndbox>
       <xmin>3527</xmin>
       <ymin>956</ymin>
@@ -355,6 +469,9 @@
   </object>
   <object>
     <name>note</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
     <bndbox>
       <xmin>1860</xmin>
       <ymin>1637</ymin>
@@ -364,6 +481,9 @@
   </object>
   <object>
     <name>tortue</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
     <bndbox>
       <xmin>2827</xmin>
       <ymin>2207</ymin>
@@ -373,6 +493,9 @@
   </object>
   <object>
     <name>lunette</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
     <bndbox>
       <xmin>486</xmin>
       <ymin>1569</ymin>
@@ -382,6 +505,9 @@
   </object>
   <object>
     <name>ciseau</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
     <bndbox>
       <xmin>593</xmin>
       <ymin>430</ymin>
@@ -391,6 +517,9 @@
   </object>
   <object>
     <name>toile</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
     <bndbox>
       <xmin>3382</xmin>
       <ymin>458</ymin>
@@ -400,6 +529,9 @@
   </object>
   <object>
     <name>ciseau</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
     <bndbox>
       <xmin>2468</xmin>
       <ymin>1897</ymin>
@@ -409,6 +541,9 @@
   </object>
   <object>
     <name>carotte</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
     <bndbox>
       <xmin>3655</xmin>
       <ymin>1825</ymin>
@@ -418,6 +553,9 @@
   </object>
   <object>
     <name>fromage</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
     <bndbox>
       <xmin>2472</xmin>
       <ymin>320</ymin>
@@ -427,6 +565,9 @@
   </object>
   <object>
     <name>dooble</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
     <bndbox>
       <xmin>2781</xmin>
       <ymin>1659</ymin>
@@ -436,6 +577,9 @@
   </object>
   <object>
     <name>cle</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
     <bndbox>
       <xmin>292</xmin>
       <ymin>247</ymin>
@@ -445,6 +589,9 @@
   </object>
   <object>
     <name>oiseau</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
     <bndbox>
       <xmin>356</xmin>
       <ymin>1749</ymin>
@@ -454,6 +601,9 @@
   </object>
   <object>
     <name>eclair</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
     <bndbox>
       <xmin>3698</xmin>
       <ymin>1322</ymin>
@@ -463,6 +613,9 @@
   </object>
   <object>
     <name>cactus</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
     <bndbox>
       <xmin>1358</xmin>
       <ymin>1806</ymin>
@@ -472,6 +625,9 @@
   </object>
   <object>
     <name>bouche</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
     <bndbox>
       <xmin>1717</xmin>
       <ymin>1770</ymin>
@@ -481,6 +637,9 @@
   </object>
   <object>
     <name>coeur</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
     <bndbox>
       <xmin>1124</xmin>
       <ymin>1635</ymin>
@@ -490,6 +649,9 @@
   </object>
   <object>
     <name>ampoule</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
     <bndbox>
       <xmin>2752</xmin>
       <ymin>396</ymin>
@@ -499,6 +661,9 @@
   </object>
   <object>
     <name>point_interrogation</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
     <bndbox>
       <xmin>2586</xmin>
       <ymin>1693</ymin>
@@ -508,6 +673,9 @@
   </object>
   <object>
     <name>fromage</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
     <bndbox>
       <xmin>1380</xmin>
       <ymin>940</ymin>
@@ -517,6 +685,9 @@
   </object>
   <object>
     <name>oeuil</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
     <bndbox>
       <xmin>3000</xmin>
       <ymin>1191</ymin>
@@ -526,6 +697,9 @@
   </object>
   <object>
     <name>sens_interdit</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
     <bndbox>
       <xmin>237</xmin>
       <ymin>417</ymin>
@@ -535,6 +709,9 @@
   </object>
   <object>
     <name>crayon</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
     <bndbox>
       <xmin>1431</xmin>
       <ymin>262</ymin>
@@ -544,6 +721,9 @@
   </object>
   <object>
     <name>dauphin</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
     <bndbox>
       <xmin>2958</xmin>
       <ymin>1007</ymin>
@@ -553,6 +733,9 @@
   </object>
   <object>
     <name>coeur</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
     <bndbox>
       <xmin>2539</xmin>
       <ymin>1170</ymin>
@@ -562,6 +745,9 @@
   </object>
   <object>
     <name>ying_yang</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
     <bndbox>
       <xmin>1839</xmin>
       <ymin>1252</ymin>
@@ -571,6 +757,9 @@
   </object>
   <object>
     <name>zebre</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
     <bndbox>
       <xmin>1349</xmin>
       <ymin>600</ymin>
@@ -580,6 +769,9 @@
   </object>
   <object>
     <name>cible</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
     <bndbox>
       <xmin>3263</xmin>
       <ymin>1056</ymin>
@@ -589,6 +781,9 @@
   </object>
   <object>
     <name>point_exclamation</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
     <bndbox>
       <xmin>347</xmin>
       <ymin>1580</ymin>
@@ -598,6 +793,9 @@
   </object>
   <object>
     <name>cactus</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
     <bndbox>
       <xmin>1796</xmin>
       <ymin>406</ymin>
@@ -607,6 +805,9 @@
   </object>
   <object>
     <name>clown</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
     <bndbox>
       <xmin>3365</xmin>
       <ymin>1180</ymin>
@@ -616,6 +817,9 @@
   </object>
   <object>
     <name>zebre</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
     <bndbox>
       <xmin>2903</xmin>
       <ymin>556</ymin>
@@ -625,6 +829,9 @@
   </object>
   <object>
     <name>ying_yang</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
     <bndbox>
       <xmin>1015</xmin>
       <ymin>981</ymin>
@@ -634,6 +841,9 @@
   </object>
   <object>
     <name>ying_yang</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
     <bndbox>
       <xmin>150</xmin>
       <ymin>1862</ymin>
@@ -643,6 +853,9 @@
   </object>
   <object>
     <name>bonhomme</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
     <bndbox>
       <xmin>160</xmin>
       <ymin>1699</ymin>
@@ -652,6 +865,9 @@
   </object>
   <object>
     <name>tache</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
     <bndbox>
       <xmin>2205</xmin>
       <ymin>464</ymin>
@@ -661,6 +877,9 @@
   </object>
   <object>
     <name>lunette</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
     <bndbox>
       <xmin>3384</xmin>
       <ymin>962</ymin>
@@ -670,6 +889,9 @@
   </object>
   <object>
     <name>goutte</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
     <bndbox>
       <xmin>2011</xmin>
       <ymin>1086</ymin>
@@ -679,6 +901,9 @@
   </object>
   <object>
     <name>tete_mort</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
     <bndbox>
       <xmin>874</xmin>
       <ymin>1779</ymin>
@@ -688,6 +913,9 @@
   </object>
   <object>
     <name>cactus</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
     <bndbox>
       <xmin>1452</xmin>
       <ymin>1200</ymin>
@@ -697,6 +925,9 @@
   </object>
   <object>
     <name>toile</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
     <bndbox>
       <xmin>569</xmin>
       <ymin>1959</ymin>
@@ -706,6 +937,9 @@
   </object>
   <object>
     <name>cible</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
     <bndbox>
       <xmin>2083</xmin>
       <ymin>614</ymin>
@@ -715,6 +949,9 @@
   </object>
   <object>
     <name>carotte</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
     <bndbox>
       <xmin>983</xmin>
       <ymin>2040</ymin>
@@ -724,6 +961,9 @@
   </object>
   <object>
     <name>tache</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
     <bndbox>
       <xmin>3686</xmin>
       <ymin>2026</ymin>
@@ -733,6 +973,9 @@
   </object>
   <object>
     <name>cle</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
     <bndbox>
       <xmin>1917</xmin>
       <ymin>2165</ymin>
@@ -742,6 +985,9 @@
   </object>
   <object>
     <name>ancre</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
     <bndbox>
       <xmin>1997</xmin>
       <ymin>1380</ymin>
@@ -751,6 +997,9 @@
   </object>
   <object>
     <name>dragon</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
     <bndbox>
       <xmin>3465</xmin>
       <ymin>1696</ymin>
@@ -760,6 +1009,9 @@
   </object>
   <object>
     <name>fantome</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
     <bndbox>
       <xmin>3235</xmin>
       <ymin>1862</ymin>
@@ -769,6 +1021,9 @@
   </object>
   <object>
     <name>bombe</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
     <bndbox>
       <xmin>3219</xmin>
       <ymin>468</ymin>
@@ -778,6 +1033,9 @@
   </object>
   <object>
     <name>eclair</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
     <bndbox>
       <xmin>1276</xmin>
       <ymin>1857</ymin>
@@ -787,6 +1045,9 @@
   </object>
   <object>
     <name>fleur</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
     <bndbox>
       <xmin>1991</xmin>
       <ymin>1642</ymin>
@@ -796,6 +1057,9 @@
   </object>
   <object>
     <name>araignee</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
     <bndbox>
       <xmin>3536</xmin>
       <ymin>1416</ymin>
@@ -805,6 +1069,9 @@
   </object>
   <object>
     <name>dooble</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
     <bndbox>
       <xmin>2707</xmin>
       <ymin>1357</ymin>
@@ -814,6 +1081,9 @@
   </object>
   <object>
     <name>point_exclamation</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
     <bndbox>
       <xmin>2153</xmin>
       <ymin>1772</ymin>
@@ -823,6 +1093,9 @@
   </object>
   <object>
     <name>feu</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
     <bndbox>
       <xmin>319</xmin>
       <ymin>2021</ymin>
@@ -832,6 +1105,9 @@
   </object>
   <object>
     <name>bonhomme</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
     <bndbox>
       <xmin>2516</xmin>
       <ymin>576</ymin>
@@ -841,6 +1117,9 @@
   </object>
   <object>
     <name>voiture</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
     <bndbox>
       <xmin>1314</xmin>
       <ymin>1588</ymin>
@@ -850,6 +1129,9 @@
   </object>
   <object>
     <name>chat</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
     <bndbox>
       <xmin>3252</xmin>
       <ymin>290</ymin>
@@ -859,6 +1141,9 @@
   </object>
   <object>
     <name>clown</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
     <bndbox>
       <xmin>2683</xmin>
       <ymin>152</ymin>
@@ -868,6 +1153,9 @@
   </object>
   <object>
     <name>dooble</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
     <bndbox>
       <xmin>1191</xmin>
       <ymin>1073</ymin>

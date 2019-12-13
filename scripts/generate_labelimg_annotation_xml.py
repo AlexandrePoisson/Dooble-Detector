@@ -74,7 +74,13 @@ def create_label_file(output_dict, img_full_path, threshold = 0.7):
 			label_object = etree.SubElement(annotation, "object")
 			name = etree.SubElement(label_object, "name")
 			name.text = str(int_to_label(output_dict['detection_classes'][i]))
-
+			pose = etree.SubElement(label_object, "pose")
+			pose.text = "Unspecified"
+			truncated = etree.SubElement(label_object, "truncated")
+			truncated.text = "0"			
+			difficult = etree.SubElement(label_object, "difficult")
+			difficult.text = "0"	
+			
 			# see here : https://stackoverflow.com/questions/48915003/get-the-bounding-box-coordinates-in-the-tensorflow-object-detection-api-tutorial
 			bndbox = etree.SubElement(label_object, "bndbox")
 
@@ -91,7 +97,13 @@ def create_label_file(output_dict, img_full_path, threshold = 0.7):
 	f.write(etree.tostring(annotation, pretty_print=True))
 	f.close()
 
+def main(output_dict, img_full_path):
+	threshold = 0.7
+	create_label_file(output_dict, img_full_path, threshold)
+
 if __name__=='__main__':
 	output_dict = pickle.load(open("/Users/Alexandre/Dooble/scripts/save.p", "rb" ))
 	img_full_path = '/Users/Alexandre/Dooble/dooble_pics/inf_test/image3.jpg'
-	create_label_file(output_dict, img_full_path)
+	threshold = 0.7
+	main(output_dict,create_label_file, threshold)
+
