@@ -97,8 +97,7 @@ def create_label_file(output_dict, img_full_path, threshold = 0.7):
 	f.write(etree.tostring(annotation, pretty_print=True))
 	f.close()
 
-def main(output_dict, img_full_path):
-	threshold = 0.7
+def main(output_dict, img_full_path, threshold):
 	create_label_file(output_dict, img_full_path, threshold)
 
 if __name__=='__main__':
