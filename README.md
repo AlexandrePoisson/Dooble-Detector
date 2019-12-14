@@ -42,6 +42,11 @@ With that you can speed up the labelling task
 	conda activate tensorflow_env
 	conda install tensorflow=1.15 lxml pillow matplotlib
 
+
+Then to save it for later reuse:
+	conda env export > environment.yaml
+
+
 #### Using Pip	
 
 	python3 -m venv tensorflow_115
@@ -99,8 +104,7 @@ See colab Notebook
 ### Export to frozen interface
 
 	set PYTHONPATH=D:\TensorFlow\models\research;D:\TensorFlow\models\research\slim;%PYTHONPATH%
-
-	python D:\TensorFlow\models\research\object_detection\export_inference_graph.py --input_type=image_tensor --pipeline_config_path="D:\TensorFlow\private_project\training_demo\training\ssd_mobilenet_v2_apn.config" --output_directory=temp --trained_checkpoint_prefix=D:\TensorFlow\checkpoint\model.ckpt-218606
+	python D:\TensorFlow\models\research\object_detection\export_inference_graph.py --input_type=image_tensor --pipeline_config_path="D:\TensorFlow\private_project\training_demo\training\ssd_mobilenet_v2_apn.config" --output_directory="D:\TensorFlow\private_project\frozen_graph"  --trained_checkpoint_prefix=D:\TensorFlow\checkpoint\model.ckpt-218606
 
 ## Step 3: Transferring to Nano
 

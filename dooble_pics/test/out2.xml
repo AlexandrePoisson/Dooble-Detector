@@ -1,7 +1,7 @@
 <annotation>
-	<folder>jacqueline</folder>
+	<folder>test</folder>
 	<filename>out2.jpg</filename>
-	<path>/home/jacqueline/out2.jpg</path>
+	<path>D:\TensorFlow\private_project\dooble_pics\test\out2.jpg</path>
 	<source>
 		<database>Unknown</database>
 	</source>
@@ -24,14 +24,14 @@
 		</bndbox>
 	</object>
 	<object>
-		<name>main</name>
+		<name>dooble</name>
 		<pose>Unspecified</pose>
 		<truncated>0</truncated>
 		<difficult>0</difficult>
 		<bndbox>
-			<xmin>201</xmin>
+			<xmin>202</xmin>
 			<ymin>220</ymin>
-			<xmax>242</xmax>
+			<xmax>243</xmax>
 			<ymax>248</ymax>
 		</bndbox>
 	</object>
