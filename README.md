@@ -108,7 +108,30 @@ See colab Notebook
 
 ## Step 3: Transferring to Nano
 
+python models-master/research/object_detection/export_tflite_ssd_graph.py \
+ — pipeline_config_path=/Users/Alexandre/Dooble/training_demo/training/ssd_mobilenet_v2_apn.config \
+ — trained_checkpoint_prefix=/Users/Alexandre/Dooble/training_demo/fine_tuned_model/frozen_inference_graph.pb \
+ — output_directory=. \
+ — add_postprocessing_op=true
 
+
+ python models-master/research/object_detection/export_tflite_ssd_graph.py \
+ — pipeline_config_path=/Users/Alexandre/Dooble/training_demo/training/ssd_mobilenet_v2_apn.config \
+ — trained_checkpoint_prefix=/Users/Alexandre/Dooble/training_demo/fine_tuned_model/model.ckpt \
+ — output_directory=. \
+ — add_postprocessing_op=true
+
+ Caution: the above does not work with Python 3.7...
+ 
+
+#### This step to create a specific intermediate pb file that would then be converted to a tflite
+
+
+ python object_detection/export_tflite_ssd_graph.py \
+ — pipeline_config_path=/Users/Alexandre/Dooble/training_demo/training/ssd_mobilenet_v2_apn.config \
+ — trained_checkpoint_prefix=/Users/Alexandre/Dooble/training_demo/fine_tuned_model/model.ckpt \
+ — output_directory=. \
+ — add_postprocessing_op=true
 
 ## Step 4: Implementing on Nano
 
