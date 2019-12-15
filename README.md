@@ -136,8 +136,42 @@ See colab Notebook
 
 ####
 Readings:
-https://www.tensorflow.org/lite/convert/cmdline_examples
 
+##### Using a saved model
+
+if saved_model.pb exist in saved_model folder 
+Note: do not give the path to the file, but to the folder containing the file
+
+	tflite_convert --output_file==D:\TensorFlow\private_project\convert_to_tflite\out.tflite --saved_model_dir=D:\TensorFlow\private_project\convert_to_tflite\input\saved_model\
+
+ValueError: None is only supported in the 1st dimension. Tensor 'image_tensor' has invalid shape '[None, None, None, 3]'.
+
+Another attempt, using the pb file created with export_ssd_py
+	tflite_convert --output_file==D:\TensorFlow\private_project\convert_to_tflite\out.tflite --saved_model_dir=D:\TensorFlow\private_project\export_to_tflite
+
+does not work, then i copy and renamed the orignal tflite_graph.pb to saved_model.pb
+
+	RuntimeError: MetaGraphDef associated with tags {'serve'} could not be found in SavedModel. To inspect available tag-sets in the SavedModel, please use the SavedModel CLI: `saved_model_cli`
+
+
+	tflite_convert --output_file=D:\TensorFlow\private_project\convert_to_tflite\out.tflite --graph_def_file=D:\TensorFlow\private_project\export_to_tflite\tflite_graph.pb
+
+
+
+	tflite_convert --output_file=D:\TensorFlow\private_project\convert_to_tflite\out.tflite --graph_def_file=D:\TensorFlow\private_project\export_to_tflite\tflite_graph.pb --input_shape=1,300,300,3 --output_arrays='TFLite_Detection_PostProcess','TFLite_Detection_PostProcess:1','TFLite_Detection_PostProcess:2','TFLite_Detection_PostProcess:3' --input_arrays=normalized_input_image_tensor --allow_custom_ops
+
+
+
+
+2019-12-15 16:05:12.670476: F tensorflow/lite/toco/tooling_util.cc:935] Check failed: GetOpWithOutput(model, output_array) Specified output array "'TFLite_Detection_PostProcess'" is not produced by any op in this graph. Is it a typo? This should not happen. If you trigger this error please send a bug report (with code to reporduce this error), to the TensorFlow Lite team.
+
+	tflite_convert --output_file=D:\TensorFlow\private_project\convert_to_tflite\out.tflite --graph_def_file=D:\TensorFlow\private_project\export_to_tflite\tflite_graph.pb --input_shape=1,300,300,3 --output_arrays="detection_scores","detection_boxes","detection_classes","detection_masks" --input_arrays=normalized_input_image_tensor --allow_custom_ops
+
+This worked !!!
+After looking on tensorboard, and also using graph info.py, on my windows setup
+	tflite_convert --output_file=D:\TensorFlow\private_project\convert_to_tflite\out.tflite --graph_def_file=D:\TensorFlow\private_project\export_to_tflite\tflite_graph.pb --input_shape=1,300,300,3 --output_arrays=TFLite_Detection_PostProcess --input_arrays=normalized_input_image_tensor --allow_custom_ops
+
+that created the tflite file !!!
 
 ## Step 3b: Transferring to Nano
 
