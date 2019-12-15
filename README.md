@@ -133,6 +133,12 @@ See colab Notebook
  — output_directory=. \
  — add_postprocessing_op=true
 
+
+####
+Readings:
+https://www.tensorflow.org/lite/convert/cmdline_examples
+
+
 ## Step 3b: Transferring to Nano
 
 
