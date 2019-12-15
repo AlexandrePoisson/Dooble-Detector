@@ -106,23 +106,23 @@ See colab Notebook
 	set PYTHONPATH=D:\TensorFlow\models\research;D:\TensorFlow\models\research\slim;%PYTHONPATH%
 	python D:\TensorFlow\models\research\object_detection\export_inference_graph.py --input_type=image_tensor --pipeline_config_path="D:\TensorFlow\private_project\training_demo\training\ssd_mobilenet_v2_apn.config" --output_directory="D:\TensorFlow\private_project\frozen_graph"  --trained_checkpoint_prefix=D:\TensorFlow\checkpoint\model.ckpt-218606
 
-## Step 3: Transferring to Nano
+## Step 3a: Transferring to iPhone
 
-python models-master/research/object_detection/export_tflite_ssd_graph.py \
- — pipeline_config_path=/Users/Alexandre/Dooble/training_demo/training/ssd_mobilenet_v2_apn.config \
- — trained_checkpoint_prefix=/Users/Alexandre/Dooble/training_demo/fine_tuned_model/frozen_inference_graph.pb \
- — output_directory=. \
- — add_postprocessing_op=true
-
-
+### Mac
  python models-master/research/object_detection/export_tflite_ssd_graph.py \
  — pipeline_config_path=/Users/Alexandre/Dooble/training_demo/training/ssd_mobilenet_v2_apn.config \
  — trained_checkpoint_prefix=/Users/Alexandre/Dooble/training_demo/fine_tuned_model/model.ckpt \
  — output_directory=. \
  — add_postprocessing_op=true
 
+
+### Windows
+ 	set PYTHONPATH=D:\TensorFlow\models\research;D:\TensorFlow\models\research\slim;%PYTHONPATH%
+	python D:\TensorFlow\models\research\object_detection\export_tflite_ssd_graph.py --pipeline_config_path="D:\TensorFlow\private_project\training_demo\training\ssd_mobilenet_v2_apn.config" --output_directory="D:\TensorFlow\private_project\export_to_tflite" --trained_checkpoint_prefix=D:\TensorFlow\checkpoint\model.ckpt-240096 --add_postprocessing_op=true
+
  Caution: the above does not work with Python 3.7...
  
+
 
 #### This step to create a specific intermediate pb file that would then be converted to a tflite
 
@@ -132,6 +132,9 @@ python models-master/research/object_detection/export_tflite_ssd_graph.py \
  — trained_checkpoint_prefix=/Users/Alexandre/Dooble/training_demo/fine_tuned_model/model.ckpt \
  — output_directory=. \
  — add_postprocessing_op=true
+
+## Step 3b: Transferring to Nano
+
 
 ## Step 4: Implementing on Nano
 
