@@ -173,6 +173,9 @@ After looking on tensorboard, and also using graph info.py, on my windows setup
 
 that created the tflite file !!!
 
+but I was not able to use that file on my xcode project : i got an error, so i used another network, a **quantized** one
+D:\TensorFlow\private_project\training_demo\training\ssd_mobilenet_v2_quantized_300x300_coco.config
+
 ## Step 3b: Transferring to Nano
 
 
