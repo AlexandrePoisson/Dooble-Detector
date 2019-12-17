@@ -3,7 +3,7 @@ from PIL import Image
 import argparse
 import os
 
-def resizer(input_path, output_path, start_index=100):
+def resizer(input_path, output_path, start_index=123):
     print("Resizer")
 
     files = []
@@ -16,7 +16,7 @@ def resizer(input_path, output_path, start_index=100):
             elif '.jpg' in file.lower():
                 files.append(os.path.join(r, file))
 
-    basewidth = 300
+    basewidth = 600
 
     for f in files:
         print(f)
