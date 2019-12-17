@@ -139,7 +139,7 @@ See colab Notebook
 
 ####
 
-Full script using the quantized model:
+Full script that works using the quantized model:
 	conda activate tensorflow_115
 	set PYTHONPATH=D:\TensorFlow\models\research;D:\TensorFlow\models\research\slim;%PYTHONPATH%
 	python D:\TensorFlow\models\research\object_detection\export_tflite_ssd_graph.py --pipeline_config_path=D:\TensorFlow\private_project\training_demo\training\ssd_mobilenet_v2_quantized_300x300_coco.config --trained_checkpoint_prefix=D:\TensorFlow\checkpoint\SSD_MobileNet_Quantized\model.ckpt-37239 --output_directory=D:\TensorFlow\private_project\convert_to_tflite\model_quantized --add_postprocessing_op=true
