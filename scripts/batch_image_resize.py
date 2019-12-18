@@ -3,7 +3,7 @@ from PIL import Image
 import argparse
 import os
 
-def resizer(input_path, output_path, start_index=123):
+def resizer(input_path, output_path, start_index=161):
     print("Resizer")
 
     files = []
@@ -39,6 +39,11 @@ def main():
                         "--inputDir",
                         help="Path to the folder where the input .jpg files are stored",
                         type=str)
+
+    parser.add_argument("-s",
+                        "--startIndex",
+                        help="Start Index",
+                        type=int)
     parser.add_argument("-o",
                         "--outputDir",
                         help="Path to the folder where the output .jpg files will be stored", 
@@ -52,7 +57,7 @@ def main():
 
     assert(os.path.isdir(args.inputDir))
 
-    resizer(args.inputDir, args.outputDir)
+    resizer(args.inputDir, args.outputDir, args.startIndex)
 
 if __name__ == '__main__':
     main()
