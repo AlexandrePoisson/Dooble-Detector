@@ -9,10 +9,6 @@ How this works ?
 What model can work with Jetson Nano / TensorRT ?
 Yolo or Pascal ?
 
-### 
-
-### 
-
 ## Step 1: Labelling Image
 capturing on linux:
 	ffmpeg -f video4linux2 -i /dev/video2 -ss 0:0:2 -frames 1 dooble10.jpg
@@ -99,12 +95,30 @@ I will not improve training and testing. Split your picture
 Not used so far
 
 ### Using colab
-See colab Notebook
+See the colab Notebook
 
 ### Export to frozen interface
 
+#### Export to frozen interface : MobileNet Model
+
 	set PYTHONPATH=D:\TensorFlow\models\research;D:\TensorFlow\models\research\slim;%PYTHONPATH%
 	python D:\TensorFlow\models\research\object_detection\export_inference_graph.py --input_type=image_tensor --pipeline_config_path="D:\TensorFlow\private_project\training_demo\training\ssd_mobilenet_v2_apn.config" --output_directory="D:\TensorFlow\private_project\frozen_graph"  --trained_checkpoint_prefix=D:\TensorFlow\checkpoint\model.ckpt-218606
+
+#### Export to frozen interface : Quantized Model
+
+	set PYTHONPATH=D:\TensorFlow\models\research;D:\TensorFlow\models\research\slim;%PYTHONPATH%
+	python D:\TensorFlow\models\research\object_detection\export_inference_graph.py --input_type=image_tensor --pipeline_config_path="D:\TensorFlow\private_project\trained_models\quantized_step_150931\ssd_mobilenet_v2_quantized_300x300_coco.config" --output_directory="D:\TensorFlow\private_project\trained_models\quantized_step_150931\frozen_graph"  --trained_checkpoint_prefix="D:\TensorFlow\private_project\trained_models\quantized_step_150931\checkpoint\model.ckpt-150931"
+
+Note: double quotes are required when executing the command above in windows / conda
+
+models:
+	checkpoint
+	frozen_graph
+	intermediate_file
+	tflite
+	pb_file
+	config_file
+	README.md
 
 ## Step 3a: Transferring to iPhone
 
@@ -119,8 +133,6 @@ See colab Notebook
 ### Windows
  	set PYTHONPATH=D:\TensorFlow\models\research;D:\TensorFlow\models\research\slim;%PYTHONPATH%
 	python D:\TensorFlow\models\research\object_detection\export_tflite_ssd_graph.py --pipeline_config_path="D:\TensorFlow\private_project\training_demo\training\ssd_mobilenet_v2_apn.config" --output_directory="D:\TensorFlow\private_project\export_to_tflite" --trained_checkpoint_prefix=D:\TensorFlow\checkpoint\model.ckpt-240096 --add_postprocessing_op=true
-
-
 
 
  Caution: the above does not work with Python 3.7...
@@ -142,9 +154,9 @@ See colab Notebook
 Full script that works using the quantized model:
 	conda activate tensorflow_115
 	set PYTHONPATH=D:\TensorFlow\models\research;D:\TensorFlow\models\research\slim;%PYTHONPATH%
-	python D:\TensorFlow\models\research\object_detection\export_tflite_ssd_graph.py --pipeline_config_path=D:\TensorFlow\private_project\training_demo\training\ssd_mobilenet_v2_quantized_300x300_coco.config --trained_checkpoint_prefix=D:\TensorFlow\checkpoint\SSD_MobileNet_Quantized\model.ckpt-37239 --output_directory=D:\TensorFlow\private_project\convert_to_tflite\model_quantized --add_postprocessing_op=true
+	python D:\TensorFlow\models\research\object_detection\export_tflite_ssd_graph.py --pipeline_config_path=D:\TensorFlow\private_project\trained_models\quantized_step_150931\ssd_mobilenet_v2_quantized_300x300_coco.config --trained_checkpoint_prefix=D:\TensorFlow\private_project\trained_models\quantized_step_150931\checkpoint\model.ckpt-150931 --output_directory=D:\TensorFlow\private_project\trained_models\quantized_step_150931\exported_ssd_pre_convert\ --add_postprocessing_op=true
 	
-	tflite_convert --output_file=D:\TensorFlow\private_project\convert_to_tflite\model_quantized\model_quantized.tflite --graph_def_file=D:\TensorFlow\private_project\convert_to_tflite\model_quantized\tflite_graph.pb --input_shape=1,300,300,3 --output_arrays=TFLite_Detection_PostProcess,TFLite_Detection_PostProcess:1,TFLite_Detection_PostProcess:2,TFLite_Detection_PostProcess:3 --input_arrays=normalized_input_image_tensor --allow_custom_ops
+	tflite_convert --output_file="D:\TensorFlow\private_project\trained_models\quantized_step_150931\converted_tflite\model_quantized.tflite"  --graph_def_file="D:\TensorFlow\private_project\trained_models\quantized_step_150931\exported_ssd_pre_convert\tflite_graph.pb" --input_shape=1,300,300,3 --output_arrays=TFLite_Detection_PostProcess,TFLite_Detection_PostProcess:1,TFLite_Detection_PostProcess:2,TFLite_Detection_PostProcess:3 --input_arrays=normalized_input_image_tensor --allow_custom_ops
 
 Readings:
 
@@ -174,13 +186,16 @@ does not work, then i copy and renamed the orignal tflite_graph.pb to saved_mode
 	tflite_convert --output_file=D:\TensorFlow\private_project\convert_to_tflite\out.tflite --graph_def_file=D:\TensorFlow\private_project\export_to_tflite\tflite_graph.pb --input_shape=1,300,300,3 --output_arrays='TFLite_Detection_PostProcess','TFLite_Detection_PostProcess:1','TFLite_Detection_PostProcess:2','TFLite_Detection_PostProcess:3' --input_arrays=normalized_input_image_tensor --allow_custom_ops
 
 
+I had this error:
 
+	2019-12-15 16:05:12.670476: F tensorflow/lite/toco/tooling_util.cc:935] Check failed: GetOpWithOutput(model, output_array) Specified output array "'TFLite_Detection_PostProcess'" is not produced by any op in this graph. Is it a typo? This should not happen. If you trigger this error please send a bug report (with code to reporduce this error), to the TensorFlow Lite team.
 
-2019-12-15 16:05:12.670476: F tensorflow/lite/toco/tooling_util.cc:935] Check failed: GetOpWithOutput(model, output_array) Specified output array "'TFLite_Detection_PostProcess'" is not produced by any op in this graph. Is it a typo? This should not happen. If you trigger this error please send a bug report (with code to reporduce this error), to the TensorFlow Lite team.
+This was due to a bad output array
 
 	tflite_convert --output_file=D:\TensorFlow\private_project\convert_to_tflite\out.tflite --graph_def_file=D:\TensorFlow\private_project\export_to_tflite\tflite_graph.pb --input_shape=1,300,300,3 --output_arrays="detection_scores","detection_boxes","detection_classes","detection_masks" --input_arrays=normalized_input_image_tensor --allow_custom_ops
 
 This worked !!!
+
 After looking on tensorboard, and also using graph info.py, on my windows setup
 	tflite_convert --output_file=D:\TensorFlow\private_project\convert_to_tflite\out.tflite --graph_def_file=D:\TensorFlow\private_project\export_to_tflite\tflite_graph.pb --input_shape=1,300,300,3 --output_arrays=TFLite_Detection_PostProcess --input_arrays=normalized_input_image_tensor --allow_custom_ops
 
@@ -188,6 +203,9 @@ that created the tflite file !!!
 
 but I was not able to use that file on my xcode project : i got an error, so i used another network, a **quantized** one
 D:\TensorFlow\private_project\training_demo\training\ssd_mobilenet_v2_quantized_300x300_coco.config
+
+## Doing inference test
+	python run_inference.py -g D:\TensorFlow\private_project\trained_models\quantized_step_150931\frozen_graph\frozen_inference_graph.pb -i D:\TensorFlow\private_project\dooble_pics\inf_test -l D:\TensorFlow\private_project\annotations\label_map.pbtxt
 
 ## Step 3b: Transferring to Nano
 
