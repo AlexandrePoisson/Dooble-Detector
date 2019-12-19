@@ -1,7 +1,7 @@
 <annotation>
-	<folder>inf_test</folder>
+	<folder>train</folder>
 	<filename>image62_6.jpg</filename>
-	<path>D:\TensorFlow\private_project\dooble_pics\inf_test\image62_6.jpg</path>
+	<path>D:\TensorFlow\private_project\dooble_pics\train\image62_6.jpg</path>
 	<source>
 		<database>Unknown</database>
 	</source>
@@ -492,7 +492,7 @@
 		</bndbox>
 	</object>
 	<object>
-		<name>cle</name>
+		<name>note</name>
 		<pose>Unspecified</pose>
 		<truncated>0</truncated>
 		<difficult>0</difficult>

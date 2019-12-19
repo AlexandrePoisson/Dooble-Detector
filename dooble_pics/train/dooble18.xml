@@ -1,7 +1,7 @@
 <annotation>
-	<folder>TO_LABEL</folder>
+	<folder>train</folder>
 	<filename>dooble18.jpg</filename>
-	<path>/Users/Alexandre/Dooble/dooble_pics/TO_LABEL/dooble18.jpg</path>
+	<path>D:\TensorFlow\private_project\dooble_pics\train\dooble18.jpg</path>
 	<source>
 		<database>Unknown</database>
 	</source>
@@ -336,7 +336,7 @@
 		</bndbox>
 	</object>
 	<object>
-		<name>tortue</name>
+		<name>dinosore</name>
 		<pose>Unspecified</pose>
 		<truncated>0</truncated>
 		<difficult>0</difficult>

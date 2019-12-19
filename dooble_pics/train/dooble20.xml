@@ -1,7 +1,7 @@
 <annotation>
-	<folder>dooble_pics</folder>
+	<folder>train</folder>
 	<filename>dooble20.jpg</filename>
-	<path>/Users/Alexandre/Dooble/dooble_pics/dooble20.jpg</path>
+	<path>D:\TensorFlow\private_project\dooble_pics\train\dooble20.jpg</path>
 	<source>
 		<database>Unknown</database>
 	</source>
@@ -108,7 +108,7 @@
 		</bndbox>
 	</object>
 	<object>
-		<name>fleur</name>
+		<name>flocon</name>
 		<pose>Unspecified</pose>
 		<truncated>0</truncated>
 		<difficult>0</difficult>

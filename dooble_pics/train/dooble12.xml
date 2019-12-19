@@ -1,7 +1,7 @@
 <annotation>
-	<folder>dooble_pics</folder>
+	<folder>train</folder>
 	<filename>dooble12.jpg</filename>
-	<path>/Users/Alexandre/Dooble/dooble_pics/dooble12.jpg</path>
+	<path>D:\TensorFlow\private_project\dooble_pics\train\dooble12.jpg</path>
 	<source>
 		<database>Unknown</database>
 	</source>
@@ -48,7 +48,7 @@
 		</bndbox>
 	</object>
 	<object>
-		<name>flocon</name>
+		<name>coeur</name>
 		<pose>Unspecified</pose>
 		<truncated>0</truncated>
 		<difficult>0</difficult>
@@ -552,7 +552,7 @@
 		</bndbox>
 	</object>
 	<object>
-		<name>chien</name>
+		<name>fantome</name>
 		<pose>Unspecified</pose>
 		<truncated>0</truncated>
 		<difficult>0</difficult>

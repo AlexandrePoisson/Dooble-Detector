@@ -1,7 +1,7 @@
 <annotation>
-	<folder>inf_test</folder>
+	<folder>train</folder>
 	<filename>dooble106.jpg</filename>
-	<path>D:\TensorFlow\private_project\dooble_pics\inf_test\dooble106.jpg</path>
+	<path>D:\TensorFlow\private_project\dooble_pics\train\dooble106.jpg</path>
 	<source>
 		<database>Unknown</database>
 	</source>
@@ -96,39 +96,27 @@
 		</bndbox>
 	</object>
 	<object>
-		<name>ancre</name>
-		<pose>Unspecified</pose>
-		<truncated>0</truncated>
-		<difficult>0</difficult>
-		<bndbox>
-			<xmin>166</xmin>
-			<ymin>35</ymin>
-			<xmax>191</xmax>
-			<ymax>64</ymax>
-		</bndbox>
-	</object>
-	<object>
 		<name>dinosore</name>
 		<pose>Unspecified</pose>
 		<truncated>0</truncated>
 		<difficult>0</difficult>
 		<bndbox>
 			<xmin>108</xmin>
-			<ymin>153</ymin>
+			<ymin>155</ymin>
 			<xmax>135</xmax>
 			<ymax>174</ymax>
 		</bndbox>
 	</object>
 	<object>
-		<name>voiture</name>
+		<name>chien</name>
 		<pose>Unspecified</pose>
 		<truncated>0</truncated>
 		<difficult>0</difficult>
 		<bndbox>
-			<xmin>143</xmin>
-			<ymin>168</ymin>
-			<xmax>165</xmax>
-			<ymax>191</ymax>
+			<xmin>142</xmin>
+			<ymin>167</ymin>
+			<xmax>164</xmax>
+			<ymax>190</ymax>
 		</bndbox>
 	</object>
 	<object>
@@ -137,10 +125,10 @@
 		<truncated>0</truncated>
 		<difficult>0</difficult>
 		<bndbox>
-			<xmin>133</xmin>
+			<xmin>136</xmin>
 			<ymin>192</ymin>
 			<xmax>163</xmax>
-			<ymax>209</ymax>
+			<ymax>208</ymax>
 		</bndbox>
 	</object>
 	<object>
@@ -211,8 +199,8 @@
 		<bndbox>
 			<xmin>161</xmin>
 			<ymin>160</ymin>
-			<xmax>186</xmax>
-			<ymax>173</ymax>
+			<xmax>188</xmax>
+			<ymax>178</ymax>
 		</bndbox>
 	</object>
 </annotation>

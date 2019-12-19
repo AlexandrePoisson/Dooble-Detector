@@ -1,7 +1,7 @@
 <annotation>
-	<folder>dooble_pics</folder>
+	<folder>train</folder>
 	<filename>dooble10.jpg</filename>
-	<path>/Users/Alexandre/Dooble/dooble_pics/dooble10.jpg</path>
+	<path>D:\TensorFlow\private_project\dooble_pics\train\dooble10.jpg</path>
 	<source>
 		<database>Unknown</database>
 	</source>
@@ -228,7 +228,7 @@
 		</bndbox>
 	</object>
 	<object>
-		<name>point_exclamation</name>
+		<name>point_interrogation</name>
 		<pose>Unspecified</pose>
 		<truncated>0</truncated>
 		<difficult>0</difficult>
@@ -300,7 +300,7 @@
 		</bndbox>
 	</object>
 	<object>
-		<name>carotte</name>
+		<name>cadenas</name>
 		<pose>Unspecified</pose>
 		<truncated>0</truncated>
 		<difficult>0</difficult>
@@ -348,7 +348,7 @@
 		</bndbox>
 	</object>
 	<object>
-		<name>cle</name>
+		<name>note</name>
 		<pose>Unspecified</pose>
 		<truncated>0</truncated>
 		<difficult>0</difficult>
@@ -573,6 +573,18 @@
 			<ymin>114</ymin>
 			<xmax>188</xmax>
 			<ymax>154</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>araignee</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>67</xmin>
+			<ymin>144</ymin>
+			<xmax>116</xmax>
+			<ymax>186</ymax>
 		</bndbox>
 	</object>
 </annotation>
