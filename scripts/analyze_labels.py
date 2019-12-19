@@ -33,7 +33,7 @@ def test():
 def main():
     # Initiate argument parser
     parser = argparse.ArgumentParser(
-        description="Picture analyzer")
+        description="Labels analyzer. Create pictures which names are <labels_name>_<picture_name>, so that user can review")
     parser.add_argument("-i",
                         "--inputDir",
                         help="Path to the folder where the input .xml files are stored",
