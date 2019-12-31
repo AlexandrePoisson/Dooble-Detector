@@ -96,7 +96,7 @@ def main():
       description="Batch Image resizer and renamer")
   parser.add_argument("-g",
                       "--inputGraph",
-                      help="Path to the frozen graph to be used",
+                      help="Path to the frozen graph to be used: eg.: graph/frozen_inference_graph.pb",
                       type=str)
 
   parser.add_argument("-i",
@@ -105,7 +105,7 @@ def main():
                       type=str)
   parser.add_argument("-l",
                       "--inputLabel",
-                      help="Path to the label file", 
+                      help="Path to the label file: eg: annotations/label_map.pbtxt", 
                       type=str)
   args = parser.parse_args()
 
