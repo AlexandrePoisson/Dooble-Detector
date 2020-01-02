@@ -19,6 +19,8 @@ Once done, create the label_map.pbtxt (manually)
 
 
 Cleanup labels
+
+
 Issue with zsh
 	grep "fromag" -f *.xml
 	zsh: no matches found: *.xml
@@ -26,7 +28,11 @@ Issue with zsh
 Then to find bad labels
 	grep 'fromag' ../dooble_pics/train/*.xml
 and then you fix it
-l
+
+After beeing uncapable to start conda, i finaly use the command below to move from zsh to bash:
+	chsh -s /bin/zsh
+
+
 ## Step 1 bis:
 Improved labeling by using the first trained model to create labelimg xml file.
 With that you can speed up the labelling task
@@ -41,6 +47,9 @@ With that you can speed up the labelling task
 
 Then to save it for later reuse:
 	conda env export > environment.yaml
+
+And then to install it later :
+	conda env create --file=environment.yaml
 
 
 #### Using Pip	
@@ -141,7 +150,6 @@ models:
 
 #### This step to create a specific intermediate pb file that would then be converted to a tflite using export_tflite_ssd_graph
 
-
  python object_detection/export_tflite_ssd_graph.py \
  — pipeline_config_path=/Users/Alexandre/Dooble/training_demo/training/ssd_mobilenet_v2_apn.config \
  — trained_checkpoint_prefix=/Users/Alexandre/Dooble/training_demo/fine_tuned_model/model.ckpt \
@@ -149,18 +157,28 @@ models:
  — add_postprocessing_op=true
 
 
-####
-
-Full script that works using the quantized model:
+#### Win10 Full script that works using the quantized model:
 	conda activate tensorflow_115
 	set PYTHONPATH=D:\TensorFlow\models\research;D:\TensorFlow\models\research\slim;%PYTHONPATH%
-	python D:\TensorFlow\models\research\object_detection\export_tflite_ssd_graph.py --pipeline_config_path=D:\TensorFlow\private_project\trained_models\quantized_step_150931\ssd_mobilenet_v2_quantized_300x300_coco.config --trained_checkpoint_prefix=D:\TensorFlow\private_project\trained_models\quantized_step_150931\checkpoint\model.ckpt-150931 --output_directory=D:\TensorFlow\private_project\trained_models\quantized_step_150931\exported_ssd_pre_convert\ --add_postprocessing_op=true
+	python D:\TensorFlow\models\research\object_detection\export_tflite_ssd_graph.py --pipeline_config_path=D:\TensorFlow\private_project\trained_models\quantized_step_150931\ssd_mobilenet_v2_quantized_300x300_coco.config --trained_checkpoint_prefix=D:\TensorFlow\private_project\trained_models\quantized_step_150931\checkpoint\model.ckpt-150931 --output_directory=D:\TensorFlow\private_project\trained_models\quantized_step_150931\exported_ssd_pre_convert\ 
+	--add_postprocessing_op=true
 	
 	tflite_convert --output_file="D:\TensorFlow\private_project\trained_models\quantized_step_150931\converted_tflite\model_quantized.tflite"  --graph_def_file="D:\TensorFlow\private_project\trained_models\quantized_step_150931\exported_ssd_pre_convert\tflite_graph.pb" --input_shape=1,300,300,3 --output_arrays=TFLite_Detection_PostProcess,TFLite_Detection_PostProcess:1,TFLite_Detection_PostProcess:2,TFLite_Detection_PostProcess:3 --input_arrays=normalized_input_image_tensor --allow_custom_ops
 
+## MAC Full script  Changing max detection
+    cd Dooble/trained_models/quantized_step_235247
+	export PYTHONPATH=${PYTHONPATH}:${HOME}/TensorFlow/models-master/research/:${HOME}/TensorFlow/models-master/research/slim
+	python ~/TensorFlow/models-master/research/object_detection/export_tflite_ssd_graph.py --pipeline_config_path=ssd_mobilenet_v2_quantized_300x300_coco.config --trained_checkpoint_prefix=checkpoint/model.ckpt-303591 --output_directory=exported_ssd_pre_convert --add_postprocessing_op=true --max_detections=20
+
+	tflite_convert --output_file=converted_tflite/model_quantized.tflite  --graph_def_file=exported_ssd_pre_convert/tflite_graph.pb --input_shape=1,300,300,3 --output_arrays=TFLite_Detection_PostProcess,TFLite_Detection_PostProcess:1,TFLite_Detection_PostProcess:2,TFLite_Detection_PostProcess:3 --input_arrays=normalized_input_image_tensor --allow_custom_ops
+
 Readings:
 
+#### Changing 
 
+It sounds that there is an option to setup:
+https://stackoverflow.com/questions/58052869/tf-lite-object-detection-only-returning-10-detections
+While invoking object_detection/export_tflite_ssd_graph.py, you would need to pass in the parameter --max_detections=20. Then, your change of NUM_DETECTIONS should work as expected.
 
 ##### Using a saved model
 
@@ -178,10 +196,7 @@ does not work, then i copy and renamed the orignal tflite_graph.pb to saved_mode
 
 	RuntimeError: MetaGraphDef associated with tags {'serve'} could not be found in SavedModel. To inspect available tag-sets in the SavedModel, please use the SavedModel CLI: `saved_model_cli`
 
-
 	tflite_convert --output_file=D:\TensorFlow\private_project\convert_to_tflite\out.tflite --graph_def_file=D:\TensorFlow\private_project\export_to_tflite\tflite_graph.pb
-
-
 
 	tflite_convert --output_file=D:\TensorFlow\private_project\convert_to_tflite\out.tflite --graph_def_file=D:\TensorFlow\private_project\export_to_tflite\tflite_graph.pb --input_shape=1,300,300,3 --output_arrays='TFLite_Detection_PostProcess','TFLite_Detection_PostProcess:1','TFLite_Detection_PostProcess:2','TFLite_Detection_PostProcess:3' --input_arrays=normalized_input_image_tensor --allow_custom_ops
 
@@ -209,6 +224,9 @@ D:\TensorFlow\private_project\training_demo\training\ssd_mobilenet_v2_quantized_
 
 ## Step 3b: Transferring to Nano
 
+## Step 4a: Implementing on iPhone
+
+Update the original file, by adding a new item, named 
 
 ## Step 4: Implementing on Nano
 
