@@ -36,6 +36,8 @@ from object_detection.utils import ops as utils_ops
 from object_detection.utils import label_map_util
 from object_detection.utils import visualization_utils as vis_util
 matplotlib.use("TkAgg")
+# May meet problem when loading a new pb file
+tf.contrib.resampler
 def load_image_into_numpy_array(image):
   (im_width, im_height) = image.size
   return np.array(image.getdata()).reshape(
