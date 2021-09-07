@@ -4,9 +4,9 @@ This repo contains everythinb but a missing file : DoobleHacker/Pods/TensorFlowL
 
 I had to remove it because it was too big. 
 I fo
-	git rm --cached DoobleHacker/Pods/TensorFlowLiteC/Frameworks/TensorFlowLiteC.framework/TensorFlowLiteC
-	git commit --amend -CHEAD
-	git push
+    git rm --cached DoobleHacker/Pods/TensorFlowLiteC/Frameworks/TensorFlowLiteC.framework/TensorFlowLiteC
+    git commit --amend -CHEAD
+    git push
 
 
 # Steps
