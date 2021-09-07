@@ -239,11 +239,18 @@ D:\TensorFlow\private_project\training_demo\training\ssd_mobilenet_v2_quantized_
 ## Doing inference test
 	python run_inference.py -g D:\TensorFlow\private_project\trained_models\quantized_step_150931\frozen_graph\frozen_inference_graph.pb -i D:\TensorFlow\private_project\dooble_pics\inf_test -l D:\TensorFlow\private_project\annotations\label_map.pbtxt
 
-## Step 4a: Implementing on iPhone
+## Step 4a: Deploying the model on iPhone
 
-Update the original file, by adding a new item, named 
+Follow instruction for the Object Detection Tutorial.
+Use the model and the label from from: Model_iOS folder.`
 
-## Step 4b: Implementing on Nano
+### Generate the icons for the application
+
+Icons can be easily generate from the website:  
+    https://appicon.co
+Then from the zip file, replace only the AppIcon.appiconset folder
+
+## Step 4b: Deploying the model on a Nvidia Jetson Nano
 
 when running inference script : got error:
 	tensorflow.python.framework.errors_impl.NotFoundError: Op type not registered 'TFLite_Detection_PostProcess' in binary running on nano. Make sure the Op and Kernel are registered in the binary running in this process. Note that if you are loading a saved graph which used ops from tf.contrib, accessing (e.g.) `tf.contrib.resampler` should be done before importing the graph, as contrib ops are lazily registered when the module is first accessed.tensorflow.python.framework.errors_impl.NotFoundError: Op type not registered 'TFLite_Detection_PostProcess' in binary running on nano. Make sure the Op and Kernel are registered in the binary running in this process. Note that if you are loading a saved graph which used ops from tf.contrib, accessing (e.g.) `tf.contrib.resampler` should be done before importing the graph, as contrib ops are lazily registered when the module is first accessed.
