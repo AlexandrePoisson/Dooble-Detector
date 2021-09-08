@@ -206,8 +206,7 @@ class ModelDataHandler: NSObject {
                     do {
                         player = try AVAudioPlayer(contentsOf: url)
                         if(player!.play())
-                        {  sleep(2)
-                           print("Sound play success")
+                        {  sleep(1)
                                             }
                         else{
                             print("Sound file could not be played")

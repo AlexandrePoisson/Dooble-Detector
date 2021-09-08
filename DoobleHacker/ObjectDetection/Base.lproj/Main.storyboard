@@ -173,20 +173,14 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JY9-ih-gmV">
                                 <rect key="frame" x="0.0" y="103" width="375" height="53"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Threads" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ViR-yL-073">
-                                        <rect key="frame" x="16" y="10" width="53" height="17"/>
+                                    <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Focus on Dooble" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="feh-xa-VWJ">
+                                        <rect key="frame" x="8" y="10" width="109" height="34"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oFM-QA-mgz">
-                                        <rect key="frame" x="250.5" y="10" width="6.5" height="17"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="otT-2w-SI6">
-                                        <rect key="frame" x="282" y="31" width="49" height="31"/>
+                                        <rect key="frame" x="310" y="11" width="49" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <connections>
                                             <action selector="onChangeSwitch:" destination="H9B-4l-MbM" eventType="valueChanged" id="wYk-eM-jmH"/>
@@ -195,46 +189,25 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="oFM-QA-mgz" firstAttribute="centerY" secondItem="ViR-yL-073" secondAttribute="centerY" id="O4R-eL-iNw"/>
-                                    <constraint firstItem="ViR-yL-073" firstAttribute="leading" secondItem="JY9-ih-gmV" secondAttribute="leading" constant="16" id="RvG-wV-eDM"/>
                                     <constraint firstAttribute="height" constant="53" id="eBF-Oa-VXH"/>
-                                    <constraint firstItem="ViR-yL-073" firstAttribute="top" secondItem="JY9-ih-gmV" secondAttribute="top" constant="10" id="wDz-cv-MKI"/>
                                 </constraints>
                             </view>
-                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="tjf-Ot-aGc">
-                                <rect key="frame" x="265" y="105.5" width="94" height="32"/>
-                                <color key="tintColor" red="0.45882352939999999" green="0.45882352939999999" blue="0.45882352939999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <connections>
-                                    <action selector="onClickThreadStepper:" destination="H9B-4l-MbM" eventType="valueChanged" id="pLw-Fj-8Vc"/>
-                                </connections>
-                            </stepper>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Blabla" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="feh-xa-VWJ">
-                                <rect key="frame" x="8" y="135" width="97" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="FWg-KA-dA9"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="OmF-uK-ZDW" firstAttribute="top" secondItem="FWg-KA-dA9" secondAttribute="top" id="8VJ-r5-VYG"/>
-                            <constraint firstItem="FWg-KA-dA9" firstAttribute="trailing" secondItem="tjf-Ot-aGc" secondAttribute="trailing" constant="16" id="Adw-ov-old"/>
                             <constraint firstItem="JY9-ih-gmV" firstAttribute="trailing" secondItem="FWg-KA-dA9" secondAttribute="trailing" id="ENR-BD-Rm9"/>
                             <constraint firstItem="OmF-uK-ZDW" firstAttribute="leading" secondItem="FWg-KA-dA9" secondAttribute="leading" id="NtT-nX-A43"/>
                             <constraint firstItem="JY9-ih-gmV" firstAttribute="leading" secondItem="FWg-KA-dA9" secondAttribute="leading" id="WXu-Pd-g8S"/>
                             <constraint firstItem="JY9-ih-gmV" firstAttribute="top" secondItem="OmF-uK-ZDW" secondAttribute="bottom" id="X0D-fr-QvD"/>
-                            <constraint firstItem="tjf-Ot-aGc" firstAttribute="leading" secondItem="oFM-QA-mgz" secondAttribute="trailing" constant="8" id="XMQ-zy-PV4"/>
                             <constraint firstItem="JY9-ih-gmV" firstAttribute="bottom" secondItem="rF4-XE-YOF" secondAttribute="bottom" id="Z8O-Pa-wJd"/>
-                            <constraint firstItem="tjf-Ot-aGc" firstAttribute="centerY" secondItem="ViR-yL-073" secondAttribute="centerY" id="gvf-fF-Rk2"/>
                             <constraint firstItem="OmF-uK-ZDW" firstAttribute="trailing" secondItem="FWg-KA-dA9" secondAttribute="trailing" id="rwX-FO-1hT"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="filterSwitch" destination="otT-2w-SI6" id="CWP-Ji-gVe"/>
-                        <outlet property="stepperValueLabel" destination="oFM-QA-mgz" id="X4C-CR-XRq"/>
                         <outlet property="tableView" destination="OmF-uK-ZDW" id="Amg-Wu-i1M"/>
-                        <outlet property="threadStepper" destination="tjf-Ot-aGc" id="RSC-HE-X6G"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cBg-Ov-BS7" userLabel="First Responder" sceneMemberID="firstResponder"/>

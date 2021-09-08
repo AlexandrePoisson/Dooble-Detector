@@ -60,9 +60,7 @@ class InferenceViewController: UIViewController {
 
   // MARK: Storyboard Outlets
   @IBOutlet weak var tableView: UITableView!
-  @IBOutlet weak var threadStepper: UIStepper!
-  @IBOutlet weak var stepperValueLabel: UILabel!
-    @IBOutlet weak var filterSwitch: UISwitch!
+  @IBOutlet weak var filterSwitch: UISwitch!
     
     
   // MARK: Constants
@@ -78,13 +76,13 @@ class InferenceViewController: UIViewController {
 
   // MARK: Instance Variables
   var inferenceTime: Double = 0
-  var dooblePic: String="Temp"
+  var dooblePic: String = "Temp"
   var wantedInputWidth: Int = 0
   var wantedInputHeight: Int = 0
   var resolution: CGSize = CGSize.zero
   var threadCountLimit: Int = 0
   var currentThreadCount: Int = 0
-    var currentSwitchState: Bool = true
+  var currentSwitchState: Bool = true
 
   // MARK: Delegate
   var delegate: InferenceViewControllerDelegate?
@@ -98,12 +96,7 @@ class InferenceViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
 
-    // Set up stepper
-    threadStepper.isUserInteractionEnabled = true
-    threadStepper.maximumValue = Double(threadCountLimit)
-    threadStepper.minimumValue = Double(minThreadCount)
-    threadStepper.value = Double(currentThreadCount)
-    
+    // Set up stepper    
     filterSwitch.isUserInteractionEnabled = true
     filterSwitch.isOn = true
 
@@ -113,13 +106,6 @@ class InferenceViewController: UIViewController {
   /**
    Delegate the change of number of threads to View Controller and change the stepper display.
    */
-  @IBAction func onClickThreadStepper(_ sender: Any) {
-
-    delegate?.didChangeThreadCount(to: Int(threadStepper.value))
-    currentThreadCount = Int(threadStepper.value)
-    stepperValueLabel.text = "\(currentThreadCount)"
-  }
-    
 
     @IBAction func onChangeSwitch(_ sender: Any) {
         delegate?.didChangeButton(to: filterSwitch.isOn)
