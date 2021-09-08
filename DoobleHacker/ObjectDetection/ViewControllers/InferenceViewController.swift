@@ -20,7 +20,7 @@ protocol InferenceViewControllerDelegate {
   /**
    This method is called when the user changes the stepper value to update number of threads used for inference.
    */
-  func didChangeThreadCount(to count: Int)
+ // func didChangeThreadCount(to count: Int)
   func didChangeButton(to state: Bool)
 }
 

@@ -120,8 +120,8 @@ class ViewController: UIViewController {
       inferenceViewController = segue.destination as? InferenceViewController
       inferenceViewController?.wantedInputHeight = tempModelDataHandler.inputHeight
       inferenceViewController?.wantedInputWidth = tempModelDataHandler.inputWidth
-      inferenceViewController?.threadCountLimit = tempModelDataHandler.threadCountLimit
-      inferenceViewController?.currentThreadCount = tempModelDataHandler.threadCount
+      //inferenceViewController?.threadCountLimit = tempModelDataHandler.threadCountLimit
+      //inferenceViewController?.currentThreadCount = tempModelDataHandler.threadCount
       inferenceViewController?.delegate = self
 
       guard let tempResult = result else {
@@ -139,7 +139,7 @@ extension ViewController: InferenceViewControllerDelegate {
         //
     }
     
-
+/*
   func didChangeThreadCount(to count: Int) {
     if modelDataHandler?.threadCount == count { return }
     modelDataHandler = ModelDataHandler(
@@ -148,7 +148,7 @@ extension ViewController: InferenceViewControllerDelegate {
       threadCount: count
     )
   }
-
+*/
 }
 
 // MARK: CameraFeedManagerDelegate Methods
