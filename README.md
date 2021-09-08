@@ -11,7 +11,7 @@ This file shall be retrievied, likely using the same pod line than in the origin
 
 This file was removed it because it was too big.
 
-    git rm --cached DoobleHacker/Pods/TensorFlowLiteCFrameworks/TensorFlowLiteC.framework/TensorFlowLiteC
+    git rm --cached DoobleHacker/Pods/TensorFlowLiteC/Frameworks/TensorFlowLiteC.framework/TensorFlowLiteC
 	git commit --amend -CHEAD
 	git push
 
@@ -31,8 +31,7 @@ Yolo or Pascal ?
     ffmpeg -f video4linux2 -i /dev/video2 -ss 0:0:2 -frames 1 dooble10.jpg
 
 ### Labelling
-Once done, use labelImg for labelling
-Once done, create the label_map.pbtxt (manually)
+Once done, use labelImg for labelling. Then, create the label_map.pbtxt (manually)
 
 
 Cleanup labels
@@ -172,15 +171,17 @@ Note: On my MAC, set up with conda, pip install onnxruntime is updating numpy, s
 ## Step 3a: Transferring to iPhone
 
 ### Mac
- python models-master/research/object_detection/export_tflite_ssd_graph.py \
- — pipeline_config_path=/Users/Alexandre/Dooble/training_demo/training/ssd_mobilenet_v2_apn.config \
- — trained_checkpoint_prefix=/Users/Alexandre/Dooble/training_demo/fine_tuned_model/model.ckpt \
- — output_directory=. \
- — add_postprocessing_op=true
+
+    python models-master/research/object_detection/export_tflite_ssd_graph.py \
+    — pipeline_config_path=/Users/Alexandre/Dooble/training_demo/training/ssd_mobilenet_v2_apn.config \
+    — trained_checkpoint_prefix=/Users/Alexandre/Dooble/training_demo/fine_tuned_model/model.ckpt \
+    — output_directory=. \
+    — add_postprocessing_op=true
 
 
 ### Windows
- 	set PYTHONPATH=D:\TensorFlow\models\research;D:\TensorFlow\models\research\slim;%PYTHONPATH%
+ 	
+	set PYTHONPATH=D:\TensorFlow\models\research;D:\TensorFlow\models\research\slim;%PYTHONPATH%
 	python D:\TensorFlow\models\research\object_detection\export_tflite_ssd_graph.py --pipeline_config_path="D:\TensorFlow\private_project\training_demo\training\ssd_mobilenet_v2_apn.config" --output_directory="D:\TensorFlow\private_project\export_to_tflite" --trained_checkpoint_prefix=D:\TensorFlow\checkpoint\model.ckpt-240096 --add_postprocessing_op=true
 
 
@@ -197,14 +198,18 @@ Note: On my MAC, set up with conda, pip install onnxruntime is updating numpy, s
 
 
 #### Win10 Full script that works using the quantized model:
+	
 	conda activate tensorflow_115
 	set PYTHONPATH=D:\TensorFlow\models\research;D:\TensorFlow\models\research\slim;%PYTHONPATH%
 	python D:\TensorFlow\models\research\object_detection\export_tflite_ssd_graph.py --pipeline_config_path=D:\TensorFlow\private_project\trained_models\quantized_step_150931\ssd_mobilenet_v2_quantized_300x300_coco.config --trained_checkpoint_prefix=D:\TensorFlow\private_project\trained_models\quantized_step_150931\checkpoint\model.ckpt-150931 --output_directory=D:\TensorFlow\private_project\trained_models\quantized_step_150931\exported_ssd_pre_convert\ 
 	--add_postprocessing_op=true
 	
-	tflite_convert --output_file="D:\TensorFlow\private_project\trained_models\quantized_step_150931\converted_tflite\model_quantized.tflite"  --graph_def_file="D:\TensorFlow\private_project\trained_models\quantized_step_150931\exported_ssd_pre_convert\tflite_graph.pb" --input_shape=1,300,300,3 --output_arrays=TFLite_Detection_PostProcess,TFLite_Detection_PostProcess:1,TFLite_Detection_PostProcess:2,TFLite_Detection_PostProcess:3 --input_arrays=normalized_input_image_tensor --allow_custom_ops
+tflite_convert
+
+    --output_file="D:\TensorFlow\private_project\trained_models\quantized_step_150931\converted_tflite\model_quantized.tflite"  --graph_def_file="D:\TensorFlow\private_project\trained_models\quantized_step_150931\exported_ssd_pre_convert\tflite_graph.pb" --input_shape=1,300,300,3 --output_arrays=TFLite_Detection_PostProcess,TFLite_Detection_PostProcess:1,TFLite_Detection_PostProcess:2,TFLite_Detection_PostProcess:3 --input_arrays=normalized_input_image_tensor --allow_custom_ops
 
 ## MAC Full script  Changing max detection
+
     cd Dooble/trained_models/quantized_step_235247
 	export PYTHONPATH=${PYTHONPATH}:${HOME}/TensorFlow/models-master/research/:${HOME}/TensorFlow/models-master/research/slim
 	python ~/TensorFlow/models-master/research/object_detection/export_tflite_ssd_graph.py --pipeline_config_path=ssd_mobilenet_v2_quantized_300x300_coco.config --trained_checkpoint_prefix=checkpoint/model.ckpt-303591 --output_directory=exported_ssd_pre_convert --add_postprocessing_op=true --max_detections=20
@@ -212,6 +217,7 @@ Note: On my MAC, set up with conda, pip install onnxruntime is updating numpy, s
 	tflite_convert --output_file=converted_tflite/model_quantized.tflite  --graph_def_file=exported_ssd_pre_convert/tflite_graph.pb --input_shape=1,300,300,3 --output_arrays=TFLite_Detection_PostProcess,TFLite_Detection_PostProcess:1,TFLite_Detection_PostProcess:2,TFLite_Detection_PostProcess:3 --input_arrays=normalized_input_image_tensor --allow_custom_ops
 
 ## Nano
+
 	export PYTHONPATH=${PYTHONPATH}:${HOME}/TensorFlow/models/research/:${HOME}/TensorFlow/models/research/slim
 
 #### Changing 
@@ -230,6 +236,7 @@ Note: do not give the path to the file, but to the folder containing the file
 	ValueError: None is only supported in the 1st dimension. Tensor 'image_tensor' has invalid shape '[None, None, None, 3]'.
 
 Another attempt, using the pb file created with export_ssd_py
+	
 	tflite_convert --output_file==D:\TensorFlow\private_project\convert_to_tflite\out.tflite --saved_model_dir=D:\TensorFlow\private_project\export_to_tflite
 
 Does not work, then i copy and renamed the orignal tflite_graph.pb to saved_model.pb
@@ -259,6 +266,7 @@ But I was not able to use that file on my Xcode project : i got an error, so i u
 D:\TensorFlow\private_project\training_demo\training\ssd_mobilenet_v2_quantized_300x300_coco.config
 
 ## Doing inference test
+
 	python run_inference.py -g D:\TensorFlow\private_project\trained_models\quantized_step_150931\frozen_graph\frozen_inference_graph.pb -i D:\TensorFlow\private_project\dooble_pics\inf_test -l D:\TensorFlow\private_project\annotations\label_map.pbtxt
 
 ## Step 4a: Deploying the model on iPhone
@@ -270,10 +278,12 @@ Use the model and the label from from: Model_iOS folder.`
 
 Icons can be easily generate from the website:  
     https://appicon.co
+
 Then from the zip file, replace only the AppIcon.appiconset folder
 
 ## Step 4b: Deploying the model on a Nvidia Jetson Nano
 
 when running inference script : got error:
+
 	tensorflow.python.framework.errors_impl.NotFoundError: Op type not registered 'TFLite_Detection_PostProcess' in binary running on nano. Make sure the Op and Kernel are registered in the binary running in this process. Note that if you are loading a saved graph which used ops from tf.contrib, accessing (e.g.) `tf.contrib.resampler` should be done before importing the graph, as contrib ops are lazily registered when the module is first accessed.tensorflow.python.framework.errors_impl.NotFoundError: Op type not registered 'TFLite_Detection_PostProcess' in binary running on nano. Make sure the Op and Kernel are registered in the binary running in this process. Note that if you are loading a saved graph which used ops from tf.contrib, accessing (e.g.) `tf.contrib.resampler` should be done before importing the graph, as contrib ops are lazily registered when the module is first accessed.
 
