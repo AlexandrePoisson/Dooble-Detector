@@ -1,12 +1,19 @@
 # Installation
 
-This repo contains everythinb but a missing file : DoobleHacker/Pods/TensorFlowLiteC/Frameworks/TensorFlowLiteC.framework/TensorFlowLiteC
+This repository contains everything required but a missing file: 
 
-I had to remove it because it was too big. 
-I fo
-    git rm --cached DoobleHacker/Pods/TensorFlowLiteC/Frameworks/TensorFlowLiteC.framework/TensorFlowLiteC
-    git commit --amend -CHEAD
-    git push
+    DoobleHacker/Pods/TensorFlowLiteC/Frameworks/TensorFlowLiteC.framework/TensorFlowLiteC
+
+
+This file shall be retrievied, likely using the same pod line than in the original TensorFlow tutorial
+
+
+
+This file was removed it because it was too big.
+
+    git rm --cached DoobleHacker/Pods/TensorFlowLiteCFrameworks/TensorFlowLiteC.framework/TensorFlowLiteC
+	git commit --amend -CHEAD
+	git push
 
 
 # Steps
@@ -21,7 +28,7 @@ Yolo or Pascal ?
 
 ## Step 1: Capturing and Labelling Image
 ### Capturing images from a webcm on a Linux Computer:
-	ffmpeg -f video4linux2 -i /dev/video2 -ss 0:0:2 -frames 1 dooble10.jpg
+    ffmpeg -f video4linux2 -i /dev/video2 -ss 0:0:2 -frames 1 dooble10.jpg
 
 ### Labelling
 Once done, use labelImg for labelling
@@ -32,13 +39,16 @@ Cleanup labels
 
 
 ### Note: Issue with zsh on MAC Catalina
-When executing the following command, zsh gives a no matches found
+When executing the following command, zsh gives a no matches found:
+	
 	grep "fromag" -f *.xml
 	zsh: no matches found: *.xml
 To fix
+    
 	setopt nonomatch
 
 Then to find bad labels
+    
 	grep 'fromag' ../dooble_pics/train/*.xml
 and then you fix it
 
@@ -46,6 +56,7 @@ and then you fix it
 Eg. if you are not able to start conda....
 
 After beeing uncapable to start conda, i finaly use the command below to move from zsh to bash:
+    
 	chsh -s /bin/zsh
 
 
