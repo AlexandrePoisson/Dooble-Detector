@@ -7,15 +7,8 @@ This is mostly based on Tensorflow Object detection tutoriel.
 
 Dooble is a trademark of Asmodee group.
 
-ifdef::env-github[]
-image:https://img.youtube.com/vi/J3OBAjZr00k/maxresdefault.jpg[link=https://youtu.be/J3OBAjZr00k]
-endif::[]
 
-ifndef::env-github[]
-video::J3OBAjZr00k[youtube]
-endif::[]
 
-https://youtu.be/J3OBAjZr00k
 # Installation
 
 This repository contains everything required but a missing file: 
