@@ -122,6 +122,27 @@ class ModelDataHandler: NSObject {
         loadLabels(fileInfo: labelsFileInfo)
     }
     
+    
+    func playSound(dooble_pic: String)
+    {
+        var player: AVAudioPlayer?
+        if let path = Bundle.main.path(forResource: dooble_pic, ofType : "m4a")
+        {
+            
+            let url = URL(fileURLWithPath : path)
+            do {
+                player = try AVAudioPlayer(contentsOf: url)
+                if(player!.play())
+                {  sleep(1)
+                }
+                else{
+                    print("Sound file could not be played")
+                }
+            } catch {
+                print ("There is an issue with this code")
+            }
+        }
+    }
     /// This class handles all data preprocessing and makes calls to run inference on a given frame
     /// through the `Interpreter`. It then formats the inferences obtained and returns the top N
     /// results for a successful inference.
@@ -197,23 +218,7 @@ class ModelDataHandler: NSObject {
         if duplicates.count == 1
         {
             dooble_pic = duplicates[0]
-            var player: AVAudioPlayer?
-            if let path = Bundle.main.path(forResource: dooble_pic, ofType : "m4a")
-            {
-                
-                let url = URL(fileURLWithPath : path)
-                do {
-                    player = try AVAudioPlayer(contentsOf: url)
-                    if(player!.play())
-                    {  sleep(1)
-                    }
-                    else{
-                        print("Sound file could not be played")
-                    }
-                } catch {
-                    print ("There is an issue with this code")
-                }
-            }
+            playSound(dooble_pic: dooble_pic)
             
         }
         else
