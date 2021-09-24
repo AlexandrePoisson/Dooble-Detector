@@ -2,8 +2,7 @@
 
 This repo contains ressources for building an application which detects the object that appears twice in a [Dooble game](https://www.dobblegame.com).
 It is possible to build an [iOS application](https://youtu.be/J3OBAjZr00k) or running python script on a Jetson Nano.
-![](DoobleApp.gif)
-<img src="DoobleApp.gif" width="50%"/>
+<img src="DoobleApp.gif" width="25%"/>
 
 The work is mostly based on Tensorflow Object detection tutorial, both for the training part, than for the deployment on iOS.
 
